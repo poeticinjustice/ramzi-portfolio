@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Prevent flash of light background in dark mode */
+  html {
+    background-color: white;
+  }
+
+  html.dark {
+    background-color: #0f172a;
+  }
+
+  /* Line clamp utilities */
+  .line-clamp-4 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 4;
+  }
+
+  /* Very light, minimal saturation background gradients with red/green contrast */
+  .hero-gradient {
+    background: linear-gradient(135deg, #faf8f8 0%, #f5f3f3 50%, #f0eeee 100%);
+  }
+
+  .dark .hero-gradient {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  }
+
+  .section-gradient {
+    background: linear-gradient(135deg, #f8faf8 0%, #f3f5f3 50%, #eef0ee 100%);
+  }
+
+  .dark .section-gradient {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  }
+
+  .card-gradient {
+    background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+    border: 1px solid #e2e8f0;
+  }
+
+  .dark .card-gradient {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    border: 1px solid #334155;
+  }
+
+  /* Light mode improvements - softer background, better contrast */
+  :root {
+    --bg-base: #f8fafc;
+    --bg-secondary: #f1f5f9;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+  }
+
+  body {
+    @apply bg-[var(--bg-base)] text-[var(--text-primary)];
+  }
+
+  /* Ensure dark mode body background */
+  html.dark body {
+    background-color: #0f172a;
+  }
+
+  /* Override bright white backgrounds in light mode */
+  .bg-white:not(.dark .bg-white) {
+    background-color: var(--bg-base) !important;
+  }
+
+  .bg-slate-50:not(.dark .bg-slate-50) {
+    background-color: var(--bg-secondary) !important;
+  }
+
+  /* Increase text contrast in light mode */
+  .text-slate-600:not(.dark .text-slate-600) {
+    color: var(--text-secondary) !important;
+  }
+
+  .text-slate-900:not(.dark .text-slate-900) {
+    color: var(--text-primary) !important;
+  }
+
+  /* No gradient borders for images in light mode - keep subtle for dark mode */
+  .accent-border {
+    background: transparent;
+  }
+
+  .dark .accent-border {
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  }
+
+  .accent-border-alt {
+    background: transparent;
+  }
+
+  .dark .accent-border-alt {
+    background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+  }
+}

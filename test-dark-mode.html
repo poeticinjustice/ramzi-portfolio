@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Simple dark mode toggle using standard Tailwind v3
+        tailwind.config = {
+            darkMode: 'class'
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white min-h-screen p-8">
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl font-bold mb-8">Dark Mode Test</h1>
+        
+        <button 
+            onclick="toggleDark()" 
+            class="px-4 py-2 bg-slate-200 dark:bg-slate-700 rounded-lg mb-8"
+        >
+            Toggle Dark Mode
+        </button>
+        
+        <div class="bg-slate-50 dark:bg-slate-800 p-6 rounded-lg border border-slate-200 dark:border-slate-700">
+            <h2 class="text-2xl font-semibold mb-4">Test Section</h2>
+            <p class="text-slate-600 dark:text-slate-400 mb-4">
+                This is a test paragraph. If dark mode is working, the background should be dark and text should be light.
+            </p>
+            <a href="#" class="text-blue-600 dark:text-blue-400 hover:underline">Test Link</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleDark() {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        }
+        
+        // Initialize from localStorage
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+</body>
+</html>
