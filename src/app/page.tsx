@@ -40,7 +40,7 @@ export default function Home() {
         </div>
       )}
 
-      <Navigation variant='home' />
+      <Navigation />
 
       {/* Hero Section */}
       <section className='hero-gradient pt-24 pb-20 px-6 lg:px-8'>
