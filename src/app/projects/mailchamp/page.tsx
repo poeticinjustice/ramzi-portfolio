@@ -40,15 +40,47 @@ export default function MailChampCaseStudy() {
         subtitle='Email Marketing Analytics Platform'
       />
 
-      {/* Project Overview */}
+      {/* Background */}
       <section className='section-gradient py-8 px-6 lg:px-8'>
         <div className='max-w-6xl mx-auto'>
           <div className='grid lg:grid-cols-2 gap-16'>
             <div>
               <h2 className='text-2xl font-medium text-slate-900 dark:text-white mb-6'>
-                Project Overview
+                Background
               </h2>
-              <ExpandableStory teaser='...' fullStory='...' className='mb-6' />
+              <ExpandableStory
+                teaser="MailChimp doesn't give us the customized reports that we need, and we used spend quite a bit of time preparing our own."
+                fullStory={
+                  <>
+                    <p>
+                      MailChimp doesn&apos;t give us the customized reports that
+                      we need at my job, and we used spend quite a bit of time
+                      preparing our own. We&apos;d have to navigate its (often
+                      slow loading) interface and copy data between pages to
+                      then calculate engagement metrics in spreadsheets. Then
+                      there was email formatting. It was repetitive, boring and
+                      could be error prone.
+                    </p>
+                    <p>
+                      I made the first version of this app in 2019, and
+                      it&apos;s evolved along the way, making the report process
+                      a little easier every time. Now, with the click of a
+                      button, one can copy either unformatted tables for
+                      spreadsheet integration or Outlook formatted reports for
+                      email distribution. There&apos;s intelligent link
+                      filtering to exclude template links (like homepage URLs)
+                      and recalculate engagement metrics for external content.
+                    </p>
+                    <p>
+                      I&apos;ve learned the most about React and Redux while
+                      working on this too. The first version was just frontend,
+                      and it&apos;s since become a robust full-stack app that
+                      uses RTK query. And I have more plans for the future.
+                    </p>
+                  </>
+                }
+                className='mb-6'
+              />
             </div>
             <div className='space-y-6'>
               <div className='bg-white dark:bg-slate-900 p-6 border border-slate-200 dark:border-slate-700'>

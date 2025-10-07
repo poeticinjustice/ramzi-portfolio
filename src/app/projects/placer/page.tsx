@@ -40,15 +40,45 @@ export default function PlacerCaseStudy() {
         subtitle='Community-driven platform for discovering and sharing interesting locations'
       />
 
-      {/* Project Overview */}
+      {/* Background */}
       <section className='section-gradient py-8 px-6 lg:px-8'>
         <div className='max-w-6xl mx-auto'>
           <div className='grid lg:grid-cols-2 gap-16'>
             <div>
               <h2 className='text-2xl font-medium text-slate-900 dark:text-white mb-6'>
-                Project Overview
+                Background
               </h2>
-              <ExpandableStory teaser='...' fullStory='...' className='mb-6' />
+              <ExpandableStory
+                teaser='I wanted to create an app using Claude Code from the beginning. I made this entirely by vibe coding. I guess Claude really made this.'
+                fullStory={
+                  <>
+                    <p>
+                      I wanted to create an app using Claude Code from the
+                      beginning. I made this entirely by vibe coding. I guess
+                      Claude really made this. In fact, after asking, Claude
+                      suggested that I should just tell it what to do to keep
+                      everything in sync. This turned out much better than I
+                      expected. Claude prepared a full-stack app, even
+                      connecting to Cloudinary, right away. I just created the
+                      .env and had it go to work.
+                    </p>
+                    <p>
+                      Because I knew that Claude was looking for higher level,
+                      conversational language, it was pretty easy to work with,
+                      but I&apos;m learning when it&apos;s helpful to be more
+                      specific. I&apos;ve ended up stuck in a conversation loop
+                      or two. It&apos;s strangely not as frustrating as I would
+                      have thought, but it&apos;s not very fun.
+                    </p>
+                    <p>
+                      Thanks for this app Claude. Now anyone can clone Placer,
+                      and create their own little vacation portal that they and
+                      their friends/family can privately share!
+                    </p>
+                  </>
+                }
+                className='mb-6'
+              />
             </div>
             <div className='space-y-6'>
               <div className='bg-white dark:bg-slate-900 p-6 border border-slate-200 dark:border-slate-700'>
@@ -59,9 +89,13 @@ export default function PlacerCaseStudy() {
                   href='https://placer-app-cffc6463c817.herokuapp.com/'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm transition-colors'
+                  className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm transition-colors relative group inline-block'
+                  title='Hosted on Heroku free tier - may take a moment to wake up'
                 >
                   placer-app-cffc6463c817.herokuapp.com
+                  <span className='absolute bottom-full left-0 mb-2 px-3 py-2 bg-slate-900 dark:bg-slate-700 text-white text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none'>
+                    Hosted on Heroku - may take a moment to wake up
+                  </span>
                 </a>
               </div>
               <div className='bg-white dark:bg-slate-900 p-6 border border-slate-200 dark:border-slate-700'>
@@ -267,11 +301,11 @@ export default function PlacerCaseStudy() {
             <p className='text-slate-600 dark:text-slate-400 leading-relaxed'>
               Multi-layered auth with JWT tokens (30-day expiration), bcrypt
               password hashing (12 rounds), and three-tier middleware chain
-              (authenticate, requireAdmin, requireApproval). Features
-              auto-login after signup, auto-logout on 401 via Axios
-              interceptors, password change with verification, and admin
-              approval workflow. Token stored in localStorage with automatic
-              injection in all API requests.
+              (authenticate, requireAdmin, requireApproval). Features auto-login
+              after signup, auto-logout on 401 via Axios interceptors, password
+              change with verification, and admin approval workflow. Token
+              stored in localStorage with automatic injection in all API
+              requests.
             </p>
           </div>
           <div className='bg-white dark:bg-slate-900 p-8 border border-slate-200 dark:border-slate-700'>
@@ -282,8 +316,8 @@ export default function PlacerCaseStudy() {
               Seamless image upload pipeline: Browser FormData → Multer memory
               storage → Cloudinary stream upload with automatic optimization
               (1200x800 max, auto quality, WebP format). Supports 1-10 photos
-              per place with captions, image lightbox viewer, and lazy
-              loading. Secure storage with cloudinaryId tracking for deletion.
+              per place with captions, image lightbox viewer, and lazy loading.
+              Secure storage with cloudinaryId tracking for deletion.
             </p>
           </div>
           <div className='bg-white dark:bg-slate-900 p-8 border border-slate-200 dark:border-slate-700'>
@@ -292,11 +326,11 @@ export default function PlacerCaseStudy() {
             </h3>
             <p className='text-slate-600 dark:text-slate-400 leading-relaxed'>
               Tiptap 3.6 WYSIWYG editor with full formatting support (bold,
-              italic, headings, lists, blockquotes, code blocks, links).
-              Custom link dialog implementation without window.prompt,
-              DOMPurify XSS sanitization on all HTML output, and placeholder
-              text support. Place descriptions support rich formatting with
-              secure content rendering.
+              italic, headings, lists, blockquotes, code blocks, links). Custom
+              link dialog implementation without window.prompt, DOMPurify XSS
+              sanitization on all HTML output, and placeholder text support.
+              Place descriptions support rich formatting with secure content
+              rendering.
             </p>
           </div>
           <div className='bg-white dark:bg-slate-900 p-8 border border-slate-200 dark:border-slate-700'>
@@ -304,13 +338,13 @@ export default function PlacerCaseStudy() {
               iOS-Style Design System
             </h3>
             <p className='text-slate-600 dark:text-slate-400 leading-relaxed'>
-              Custom CSS design system inspired by iOS interfaces, featuring
-              CSS variables for dark/light theming (uiSlice manages theme
-              state), responsive gallery layouts (2 columns on mobile,
-              expanding on desktop), touch-friendly interactions,
-              -apple-system font stack, and mobile-first responsive design.
-              Includes image lightbox, skeleton loading states, and seamless
-              transitions across all devices.
+              Custom CSS design system inspired by iOS interfaces, featuring CSS
+              variables for dark/light theming (uiSlice manages theme state),
+              responsive gallery layouts (2 columns on mobile, expanding on
+              desktop), touch-friendly interactions, -apple-system font stack,
+              and mobile-first responsive design. Includes image lightbox,
+              skeleton loading states, and seamless transitions across all
+              devices.
             </p>
           </div>
           <div className='bg-white dark:bg-slate-900 p-8 border border-slate-200 dark:border-slate-700'>
@@ -320,11 +354,10 @@ export default function PlacerCaseStudy() {
             <p className='text-slate-600 dark:text-slate-400 leading-relaxed'>
               Enterprise-grade security with JWT authentication (30-day
               expiration), bcrypt password hashing (12 rounds), rate limiting
-              (500 requests per 15 minutes), CORS configuration, Helmet
-              security headers with CSP, MongoDB injection protection, and XSS
-              protection via DOMPurify. Input validation with
-              express-validator ensures data integrity. File uploads limited
-              to 5MB with type validation.
+              (500 requests per 15 minutes), CORS configuration, Helmet security
+              headers with CSP, MongoDB injection protection, and XSS protection
+              via DOMPurify. Input validation with express-validator ensures
+              data integrity. File uploads limited to 5MB with type validation.
             </p>
           </div>
         </div>

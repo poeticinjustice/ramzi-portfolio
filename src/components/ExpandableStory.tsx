@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 interface ExpandableStoryProps {
   teaser: string;
-  fullStory: string;
+  fullStory: string | React.ReactNode;
   className?: string;
 }
 
@@ -17,16 +17,22 @@ const ExpandableStory: React.FC<ExpandableStoryProps> = ({
 
   return (
     <div className={className}>
-      <p
-        className={`text-slate-600 dark:text-slate-400 leading-relaxed ${
-          !isExpanded ? 'line-clamp-4' : ''
-        }`}
-      >
-        {isExpanded ? fullStory : teaser}
-        {!isExpanded && (
-          <span className='text-slate-400 dark:text-slate-500'>...</span>
-        )}
-      </p>
+      {isExpanded && typeof fullStory !== 'string' ? (
+        <div className='text-slate-600 dark:text-slate-400 leading-relaxed space-y-4'>
+          {fullStory}
+        </div>
+      ) : (
+        <p
+          className={`text-slate-600 dark:text-slate-400 leading-relaxed ${
+            !isExpanded ? 'line-clamp-4' : ''
+          }`}
+        >
+          {isExpanded ? fullStory : teaser}
+          {!isExpanded && (
+            <span className='text-slate-400 dark:text-slate-500'>...</span>
+          )}
+        </p>
+      )}
 
       <button
         onClick={() => setIsExpanded(!isExpanded)}

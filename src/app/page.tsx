@@ -245,9 +245,13 @@ export default function Home() {
                         'KTR'
                       )
                     }
-                    className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors'
+                    className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors relative group'
+                    title='Hosted on Heroku free tier - may take a moment to wake up'
                   >
                     Live Demo
+                    <span className='absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-slate-900 dark:bg-slate-700 text-white text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none'>
+                      Hosted on Heroku - may take a moment to wake up
+                    </span>
                   </button>
                   <a
                     href='/projects/ktr'
@@ -263,7 +267,7 @@ export default function Home() {
             <div className='bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 transition-colors duration-200'>
               <div className='p-8'>
                 <h3 className='text-xl font-medium text-slate-900 dark:text-white mb-4'>
-                  NYC Jobs Platform
+                  NYC Jobs
                 </h3>
                 <p className='text-slate-600 dark:text-slate-400 mb-6 leading-relaxed'>
                   Job search platform for 6,000+ NYC government positions.
@@ -302,9 +306,13 @@ export default function Home() {
                         'NYC Jobs'
                       )
                     }
-                    className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors'
+                    className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors relative group'
+                    title='Hosted on Render free tier - may take a moment to wake up'
                   >
                     Live Demo
+                    <span className='absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-slate-900 dark:bg-slate-700 text-white text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none'>
+                      Hosted on Render - may take a moment to wake up
+                    </span>
                   </button>
                   <a
                     href='/projects/nyc-jobs'
@@ -421,9 +429,13 @@ export default function Home() {
                         'Placer'
                       )
                     }
-                    className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors'
+                    className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors relative group'
+                    title='Hosted on Heroku free tier - may take a moment to wake up'
                   >
                     Live Demo
+                    <span className='absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-slate-900 dark:bg-slate-700 text-white text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none'>
+                      Hosted on Heroku - may take a moment to wake up
+                    </span>
                   </button>
                   <a
                     href='/projects/placer'

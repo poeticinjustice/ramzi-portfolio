@@ -34,17 +34,57 @@ export default function NYCJobsCaseStudy() {
     <div className='min-h-screen bg-white dark:bg-slate-900'>
       <Navigation />
 
-      <ProjectHero title='NYC Jobs' subtitle='MERN Stack Job Search Application' />
+      <ProjectHero
+        title='NYC Jobs'
+        subtitle='New York City Job Search Application'
+      />
 
-      {/* Project Overview */}
+      {/* Background */}
       <section className='section-gradient py-8 px-6 lg:px-8'>
         <div className='max-w-6xl mx-auto'>
           <div className='grid lg:grid-cols-2 gap-16'>
             <div>
               <h2 className='text-2xl font-medium text-slate-900 dark:text-white mb-6'>
-                Project Overview
+                Background
               </h2>
-              <ExpandableStory teaser='...' fullStory='...' className='mb-6' />
+              <ExpandableStory
+                teaser="New York's an exciting city, and as it turns out, New York has lots of exciting data. From tree maps to skate parks and job postings, you can find much of what's out in the city right online."
+                fullStory={
+                  <>
+                    <p>
+                      New York&apos;s an exciting city, and as it turns out, New
+                      York has lots of exciting data. From tree maps to skate
+                      parks and job postings, you can find much of what&apos;s
+                      out in the city right online. I wanted to learn more about
+                      their Open Data portal, so I decided to make a site using
+                      their public Jobs NYC Postings API endpoint.
+                    </p>
+                    <p>
+                      The city&apos;s own jobs site is very nice. First, it
+                      loads right away! It&apos;s not running on Render&apos;s
+                      free tier like mine, and the best way to apply is on it,
+                      but one can&apos;t search and filter by salary. For one of
+                      the world&apos;s most expensive cities, they make their
+                      applicants work to figure out whether they can afford to
+                      live there. Still, they have thousands of great jobs, and
+                      I felt that there should be a site that could provide that
+                      needed service, so I made it.
+                    </p>
+                    <p>
+                      To make the process of applying to city jobs easier, users
+                      can set up profiles and add job-linked notes with priority
+                      levels and tags to track applications and organize their
+                      search process. They can also add a blank note if
+                      they&apos;d like to track a job outside of the city
+                      government. It&apos;s an exciting time in NYC, and many
+                      more people might want to work for the upcoming mayor. He
+                      talks a lot about affordability, so this app can help
+                      satisfy one aspect of that.
+                    </p>
+                  </>
+                }
+                className='mb-6'
+              />
             </div>
             <div className='space-y-6'>
               <div className='bg-white dark:bg-slate-900 p-6 border border-slate-200 dark:border-slate-700'>
@@ -55,9 +95,13 @@ export default function NYCJobsCaseStudy() {
                   href='https://nyc-jobs-app.onrender.com/'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm transition-colors'
+                  className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm transition-colors relative group inline-block'
+                  title='Hosted on Render free tier - may take a moment to wake up'
                 >
                   nyc-jobs-app.onrender.com
+                  <span className='absolute bottom-full left-0 mb-2 px-3 py-2 bg-slate-900 dark:bg-slate-700 text-white text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none'>
+                    Hosted on Render - may take a moment to wake up
+                  </span>
                 </a>
               </div>
               <div className='bg-white dark:bg-slate-900 p-6 border border-slate-200 dark:border-slate-700'>
@@ -139,8 +183,7 @@ export default function NYCJobsCaseStudy() {
                 <li className='flex items-start space-x-2'>
                   <div className='w-1.5 h-1.5 bg-slate-400 rounded-full mt-2 flex-shrink-0'></div>
                   <span>
-                    Advanced filtering and pagination for large note
-                    collections
+                    Advanced filtering and pagination for large note collections
                   </span>
                 </li>
               </ul>
@@ -155,9 +198,7 @@ export default function NYCJobsCaseStudy() {
               <ul className='space-y-2 text-slate-600 dark:text-slate-400 text-sm'>
                 <li className='flex items-start space-x-2'>
                   <div className='w-1.5 h-1.5 bg-slate-400 rounded-full mt-2 flex-shrink-0'></div>
-                  <span>
-                    JWT-based authentication with persistent sessions
-                  </span>
+                  <span>JWT-based authentication with persistent sessions</span>
                 </li>
                 <li className='flex items-start space-x-2'>
                   <div className='w-1.5 h-1.5 bg-slate-400 rounded-full mt-2 flex-shrink-0'></div>

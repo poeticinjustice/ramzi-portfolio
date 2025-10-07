@@ -27,7 +27,7 @@ export default function KTRCaseStudy() {
       src: 'https://res.cloudinary.com/ramziscloud/image/upload/v1759687767/portfolio/vksdlh0aoqkomlormm0v.png',
       alt: 'Know The Ropes Dashboard - Congressional vote browsing and filtering interface',
       caption:
-        'Dashboard View - Browse and filter thousands of congressional votes with real-time data from House and Senate',
+        'Dashboard View - Update, browse and filter thousands of congressional votes with real-time data from House and Senate',
     },
   ];
 
@@ -40,15 +40,47 @@ export default function KTRCaseStudy() {
         subtitle='Congressional Information & Community Discussion Platform'
       />
 
-      {/* Project Overview */}
+      {/* Background */}
       <section className='section-gradient py-8 px-6 lg:px-8'>
         <div className='max-w-6xl mx-auto'>
           <div className='grid lg:grid-cols-2 gap-16'>
             <div>
               <h2 className='text-2xl font-medium text-slate-900 dark:text-white mb-6'>
-                Project Overview
+                Background
               </h2>
-              <ExpandableStory teaser='...' fullStory='...' className='mb-6' />
+              <ExpandableStory
+                teaser='This was an exciting project for me. I wanted to use the ProPublica Congress API, but they stopped giving out API keys and ultimately sunsetted the project before I had a chance to get access to it.'
+                fullStory={
+                  <>
+                    <p>
+                      This was an exciting project for me. I wanted to use the
+                      ProPublica Congress API, but they stopped giving out API
+                      keys and ultimately sunsetted the project before I had a
+                      chance to access it. So, it became very exciting when I
+                      discovered a web scraping tool that pulls data from the
+                      house and senate pages. I think some people from the
+                      ProPublica and GovTrack teams maintain those tools, which
+                      became very helpful for me to update KTR&apos;s database.
+                    </p>
+                    <p>
+                      It&apos;s a python tool, and I use it in my admin panels.
+                      I periodically seed the database with updated info, and I
+                      hope to make the process automatic at some point. GovTrack
+                      is a fantastic website with a ton of information about
+                      what&apos;s going on in Congress. I wanted to create a
+                      simpler site that just tracks congress members and their
+                      votes. I also wanted to give it more of a social aspect
+                      where one can focus on members&apos; specific votes and
+                      trends.
+                    </p>
+                    <p>
+                      I think it&apos;s pretty interesting. Check it out. It
+                      will be evolving.
+                    </p>
+                  </>
+                }
+                className='mb-6'
+              />
             </div>
             <div className='space-y-6'>
               <div className='bg-white dark:bg-slate-900 p-6 border border-slate-200 dark:border-slate-700'>
@@ -59,9 +91,13 @@ export default function KTRCaseStudy() {
                   href='https://ktr-c75c27a564a2.herokuapp.com/'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm transition-colors'
+                  className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm transition-colors relative group inline-block'
+                  title='Hosted on Heroku free tier - may take a moment to wake up'
                 >
                   ktr-c75c27a564a2.herokuapp.com
+                  <span className='absolute bottom-full left-0 mb-2 px-3 py-2 bg-slate-900 dark:bg-slate-700 text-white text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none'>
+                    Hosted on Heroku - may take a moment to wake up
+                  </span>
                 </a>
               </div>
               <div className='bg-white dark:bg-slate-900 p-6 border border-slate-200 dark:border-slate-700'>
