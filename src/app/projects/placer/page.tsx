@@ -19,15 +19,15 @@ export default function PlacerCaseStudy() {
   const placerImages = [
     {
       src: 'https://res.cloudinary.com/ramziscloud/image/upload/v1759687833/portfolio/qlprp8smw8xeoswnbong.png',
-      alt: 'Placer Location Discovery - Interactive map view showing user-submitted places with photos and descriptions',
-      caption:
-        'Interactive Map View - Location discovery platform with Leaflet maps, geolocation search, and user-submitted places with photos',
-    },
-    {
-      src: 'https://res.cloudinary.com/ramziscloud/image/upload/v1759687832/portfolio/cgwfxoqui7ch05orvbjt.png',
       alt: 'Placer Place Details - Rich place profiles with photo galleries, comments, and location information',
       caption:
         'Place Details & Gallery - Rich place profiles with photo galleries, user comments, and comprehensive location information',
+    },
+    {
+      src: 'https://res.cloudinary.com/ramziscloud/image/upload/v1759687832/portfolio/cgwfxoqui7ch05orvbjt.png',
+      alt: 'Placer Location Discovery - Interactive map view showing user-submitted places with photos and descriptions',
+      caption:
+        'Interactive Map View - Location discovery platform with Leaflet maps, geolocation search, and user-submitted places with photos',
     },
   ];
 
@@ -66,9 +66,9 @@ export default function PlacerCaseStudy() {
                       Because I knew that Claude was looking for higher level,
                       conversational language, it was pretty easy to work with,
                       but I&apos;m learning when it&apos;s helpful to be more
-                      specific. I&apos;ve ended up stuck in a conversation loop
-                      or two. It&apos;s strangely not as frustrating as I would
-                      have thought, but it&apos;s not very fun.
+                      specific. I ended up stuck in a conversation loop or two.
+                      It&apos;s strangely not as frustrating as I would have
+                      thought, but it&apos;s not very fun.
                     </p>
                     <p>
                       Thanks for this app Claude. Now anyone can clone Placer,
@@ -141,7 +141,7 @@ export default function PlacerCaseStudy() {
               </svg>
             }
             title='Interactive Maps'
-            description='Leaflet maps integration with geolocation, place markers, and visual place discovery using OpenStreetMap for seamless location-based exploration.'
+            description='Leaflet maps integration with geolocation, place markers, and visual place discovery using OpenStreetMap for location-based exploration.'
           />
           <FeatureCard
             icon={
@@ -160,7 +160,7 @@ export default function PlacerCaseStudy() {
               </svg>
             }
             title='Photo Sharing'
-            description='Cloudinary integration for seamless photo uploads and storage, enabling users to document and share their place experiences with high-quality image management.'
+            description='Cloudinary integration for photo uploads and storage, enabling users to document and share their experiences through high-quality image management.'
           />
           <FeatureCard
             icon={
@@ -179,7 +179,7 @@ export default function PlacerCaseStudy() {
               </svg>
             }
             title='User Profiles'
-            description='Comprehensive user profile management with avatar uploads, personal information, and paginated place collections (20 per page) for building community connections.'
+            description='Comprehensive user profile management with avatar uploads, personal information, and paginated place collections (20 per page).'
           />
           <FeatureCard
             icon={
@@ -198,7 +198,7 @@ export default function PlacerCaseStudy() {
               </svg>
             }
             title='Comments System'
-            description='Social interaction features with comments on places, enabling users to share experiences, ask questions, and build community around shared locations.'
+            description='Social interaction features with comments on places, enabling users to share experiences and ask questions in their community.'
           />
           <FeatureCard
             icon={

@@ -18,16 +18,16 @@ export default function MailChampCaseStudy() {
 
   const mailchampImages = [
     {
-      src: 'https://res.cloudinary.com/ramziscloud/image/upload/v1759689259/portfolio/f6enqcp9q0ud9qro4k8i.png',
-      alt: 'MailChamp Analytics Dashboard - Comprehensive email campaign performance metrics and visual analytics',
+      src: 'https://res.cloudinary.com/ramziscloud/image/upload/v1759689258/portfolio/kesmosqqer7ylnsqktew.png',
+      alt: 'MailChamp Analytics Dashboard (redacted) - Comprehensive email campaign performance metrics and visual analytics',
       caption:
-        'Analytics Dashboard - Comprehensive campaign performance metrics with visual charts and automated data extraction',
+        'Analytics Dashboard (redacted) - Comprehensive campaign performance metrics with visual chart and automated data extraction ',
     },
     {
-      src: 'https://res.cloudinary.com/ramziscloud/image/upload/v1759689258/portfolio/kesmosqqer7ylnsqktew.png',
-      alt: 'MailChamp Report Generation - Automated report creation with dual-format export capabilities',
+      src: 'https://res.cloudinary.com/ramziscloud/image/upload/v1759689259/portfolio/f6enqcp9q0ud9qro4k8i.png',
+      alt: 'MailChamp Report Generation (redacted) - Automated report creation with dual-format export capabilities',
       caption:
-        'Report Generation Interface - Automated report creation with link filtering, dual-format exports, and team collaboration features',
+        'Report Generation Interface (redacted) - Automated report creation with link filtering, dual-format exports, and team collaboration features',
     },
   ];
 

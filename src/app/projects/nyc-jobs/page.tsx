@@ -20,7 +20,7 @@ export default function NYCJobsCaseStudy() {
       src: 'https://res.cloudinary.com/ramziscloud/image/upload/v1759687825/portfolio/bihjxsat6tboszhlk40o.png',
       alt: 'NYC Jobs Search Interface - Advanced job search with filtering by category, location, salary, and keywords',
       caption:
-        'Advanced Job Search - Real-time search through 3,000+ NYC government positions with multi-criteria filtering and smart caching',
+        'Advanced Job Search - Real-time search through thousands of NYC government positions with multi-criteria filtering and smart caching',
     },
     {
       src: 'https://res.cloudinary.com/ramziscloud/image/upload/v1759687826/portfolio/g4ukit6ndg1eafmevqap.png',
@@ -66,17 +66,17 @@ export default function NYCJobsCaseStudy() {
                       but one can&apos;t search and filter by salary. For one of
                       the world&apos;s most expensive cities, they make their
                       applicants work to figure out whether they can afford to
-                      live there. Still, they have thousands of great jobs, and
-                      I felt that there should be a site that could provide that
+                      live here. Still, they have thousands of great jobs, and I
+                      felt that there should be a site that could provide that
                       needed service, so I made it.
                     </p>
                     <p>
                       To make the process of applying to city jobs easier, users
                       can set up profiles and add job-linked notes with priority
                       levels and tags to track applications and organize their
-                      search process. They can also add a blank note if
+                      search process. They can also add a separate note if
                       they&apos;d like to track a job outside of the city
-                      government. It&apos;s an exciting time in NYC, and many
+                      governm ent. It&apos;s an exciting time in NYC, and many
                       more people might want to work for the upcoming mayor. He
                       talks a lot about affordability, so this app can help
                       satisfy one aspect of that.
@@ -388,7 +388,7 @@ flowchart LR
                 />
               </svg>
             }
-            title='3,000+ Job Postings'
+            title='Thousands of Job Postings'
             description='Searchable NYC government positions'
           />
           <HighlightCard

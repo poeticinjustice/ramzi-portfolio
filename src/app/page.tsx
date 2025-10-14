@@ -73,10 +73,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section
-        id='about'
-        className='section-gradient py-20 px-6 lg:px-8'
-      >
+      <section id='about' className='section-gradient py-20 px-6 lg:px-8'>
         <div className='max-w-6xl mx-auto'>
           <div className='mb-16'>
             <h2 className='text-3xl md:text-4xl font-light text-slate-900 dark:text-white mb-6 tracking-tight text-center'>
@@ -194,10 +191,10 @@ export default function Home() {
                   KTR (Know The Ropes)
                 </h3>
                 <p className='text-slate-600 dark:text-slate-400 mb-6 leading-relaxed'>
-                  Congressional voting records and member data. Scrapes House and
-                  Senate websites using Python/lxml, processes vote data through
-                  Node.js batch pipelines, and provides vote tracking, member
-                  profiles, and pattern analysis with an admin dashboard.
+                  Reviews congressional voting records and member data, scrapes
+                  House and Senate websites, processes vote data, provides vote
+                  tracking and member profiles, and provides pattern analysis
+                  with an admin dashboard.
                 </p>
                 <div className='flex flex-wrap gap-2 mb-6'>
                   <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
@@ -270,7 +267,7 @@ export default function Home() {
                   NYC Jobs
                 </h3>
                 <p className='text-slate-600 dark:text-slate-400 mb-6 leading-relaxed'>
-                  Job search platform for 6,000+ NYC government positions.
+                  Job search platform for thousands of NYC government positions.
                   Searches by category, location, salary, and keywords. Includes
                   note-taking with priority levels and tags for tracking
                   applications. Links directly to official job postings for
@@ -331,12 +328,10 @@ export default function Home() {
                   MailChamp
                 </h3>
                 <p className='text-slate-600 dark:text-slate-400 mb-6 leading-relaxed'>
-                  Turns hours of manual MailChimp data analysis into seconds.
-                  Automates campaign performance reporting with customizable
-                  link exclusion, dual-format exports (spreadsheet +
-                  email-ready), and visual analytics—eliminating the tedious
-                  process of copying data across multiple pages and calculating
-                  statistics manually.
+                  Automates campaign reporting with customizable link exclusion,
+                  dual-format exports (spreadsheet + email-ready), and visual
+                  analytics—eliminating the process of copying data across
+                  multiple pages and calculating statistics manually.
                 </p>
                 <div className='flex flex-wrap gap-2 mb-6'>
                   <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
@@ -394,8 +389,8 @@ export default function Home() {
                   Placer
                 </h3>
                 <p className='text-slate-600 dark:text-slate-400 mb-6 leading-relaxed'>
-                  Location discovery and sharing platform. Users post places with
-                  photos (via Cloudinary), view them on Leaflet maps with
+                  Location discovery and sharing platform. Users post places
+                  with photos (via Cloudinary), view them on Leaflet maps with
                   geolocation search, and browse in gallery/list/map views.
                   Includes user profiles, comments, and admin approval workflow.
                 </p>
@@ -451,10 +446,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section
-        id='contact'
-        className='section-gradient py-20 px-6 lg:px-8'
-      >
+      <section id='contact' className='section-gradient py-20 px-6 lg:px-8'>
         <div className='max-w-6xl mx-auto'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl md:text-4xl font-light text-slate-900 dark:text-white mb-6 tracking-tight'>

@@ -19,9 +19,9 @@ export default function KTRCaseStudy() {
   const ktrImages = [
     {
       src: 'https://res.cloudinary.com/ramziscloud/image/upload/v1759687768/portfolio/vk2nu8df6n4ikyz02kmp.png',
-      alt: 'Know The Ropes Vote Analysis - Detailed vote information with member voting records',
+      alt: 'Know The Ropes gallery of congress members - includes general information and links to member&apos;s comprehensive vote details',
       caption:
-        'Vote Analysis - Comprehensive vote details with member records and community discussion features',
+        'Congress Member View - Links to member&apos;s comprehensive vote details with member records and community discussion features',
     },
     {
       src: 'https://res.cloudinary.com/ramziscloud/image/upload/v1759687767/portfolio/vksdlh0aoqkomlormm0v.png',
@@ -56,10 +56,10 @@ export default function KTRCaseStudy() {
                       This was an exciting project for me. I wanted to use the
                       ProPublica Congress API, but they stopped giving out API
                       keys and ultimately sunsetted the project before I had a
-                      chance to access it. So, it became very exciting when I
+                      chance to access it. It became very exciting when I
                       discovered a web scraping tool that pulls data from the
                       house and senate pages. I think some people from the
-                      ProPublica and GovTrack teams maintain those tools, which
+                      ProPublica and GovTrack teams maintain that tools which
                       became very helpful for me to update KTR&apos;s database.
                     </p>
                     <p>
