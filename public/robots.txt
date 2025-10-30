@@ -1,3 +1,7 @@
-# Disallow all search engine crawling
+# Allow LinkedIn bot
+User-agent: LinkedInBot
+Allow: /
+
+# Block all other bots
 User-agent: *
 Disallow: /

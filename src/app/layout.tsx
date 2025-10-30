@@ -36,6 +36,9 @@ export const metadata: Metadata = {
       index: false,
       follow: false,
     },
+    // Allow LinkedIn to crawl and index
+    'max-image-preview': 'large',
+    'max-snippet': -1,
   },
   openGraph: {
     title: 'Ramzi Kanazi - Full-Stack Developer',
