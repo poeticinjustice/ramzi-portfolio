@@ -6,14 +6,16 @@ interface ExpandableStoryProps {
   teaser: string;
   fullStory: string | React.ReactNode;
   className?: string;
+  defaultExpanded?: boolean;
 }
 
 const ExpandableStory: React.FC<ExpandableStoryProps> = ({
   teaser,
   fullStory,
   className = '',
+  defaultExpanded = false,
 }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(defaultExpanded);
 
   return (
     <div className={className}>

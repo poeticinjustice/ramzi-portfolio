@@ -76,10 +76,9 @@ export default function NYCJobsCaseStudy() {
                       levels and tags to track applications and organize their
                       search process. They can also add a separate note if
                       they&apos;d like to track a job outside of the city
-                      governm ent. It&apos;s an exciting time in NYC, and many
-                      more people might want to work for the upcoming mayor. He
-                      talks a lot about affordability, so this app can help
-                      satisfy one aspect of that.
+                      government. With thousands of positions across every
+                      borough and agency, this app can help make the city&apos;s
+                      job market a little more navigable.
                     </p>
                   </>
                 }

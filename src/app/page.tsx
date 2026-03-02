@@ -50,9 +50,9 @@ export default function Home() {
               Full-Stack Developer
             </h1>
             <p className='text-xl md:text-2xl text-slate-600 dark:text-slate-400 mb-12 max-w-4xl mx-auto leading-relaxed'>
-              Building data-driven web applications that make complex
-              information accessible—from congressional voting records to NYC
-              job markets.
+              Building data-driven web and mobile applications that make
+              complex information accessible—from congressional voting records
+              to NYC job markets.
             </p>
             <div className='flex flex-col sm:flex-row gap-6 justify-center'>
               <a
@@ -80,16 +80,17 @@ export default function Home() {
               About
             </h2>
             <p className='text-lg text-slate-600 dark:text-slate-400 max-w-4xl mx-auto leading-relaxed text-left'>
-              From my Commodore 64 to embarrassingly asking Cursor&apos;s and
-              Claude Code&apos;s opinions on my about statement, I have had a
-              lifelong interest in technology. With a curiosity for data ranging
-              from congressional voting records to NYC&apos;s open datasets, I
-              build applications that I hope can make information more
-              accessible. Working with the MERN stack and Redux Toolkit, I
-              create platforms that handle everything from tracking thousands of
-              congressional votes to streamlining email marketing analytics.
-              I&apos;m drawn to projects that explore what&apos;s possible when
-              you combine interesting APIs with modern web technologies.
+              From my Commodore 64 to building full-stack web and mobile
+              applications, I have had a lifelong interest in technology. With
+              a curiosity for data ranging from congressional voting records to
+              NYC&apos;s open datasets, I build applications that make complex
+              information more accessible. Working with the MERN stack, React
+              Native, and Redux Toolkit—and familiarity with tools like Claude
+              Code, Cursor, and Xcode—I create platforms that handle everything
+              from tracking thousands of congressional votes to streamlining
+              email marketing analytics. I&apos;m drawn to projects that
+              explore what&apos;s possible when you combine interesting APIs
+              with modern web technologies.
             </p>
           </div>
 
@@ -114,8 +115,8 @@ export default function Home() {
                 Frontend Development
               </h3>
               <p className='text-sm text-slate-600 dark:text-slate-400 leading-relaxed'>
-                React 19, Redux Toolkit, Tailwind CSS, Bootstrap, Vite,
-                Cloudinary, Leaflet Maps
+                React 19, React Native, Redux Toolkit, Tailwind CSS,
+                Bootstrap, Vite, Cloudinary, Leaflet Maps
               </p>
             </div>
 
@@ -163,7 +164,7 @@ export default function Home() {
                 DevOps & Tools
               </h3>
               <p className='text-sm text-slate-600 dark:text-slate-400 leading-relaxed'>
-                Git, Heroku, Render, CI/CD, Claude Code, Cursor AI
+                Git, Xcode, Heroku, Render, CI/CD, Claude Code, Cursor
               </p>
             </div>
           </div>
@@ -179,32 +180,34 @@ export default function Home() {
             </h2>
             <p className='text-lg text-slate-600 dark:text-slate-400 max-w-4xl mx-auto leading-relaxed'>
               Exploring what&apos;s possible when you combine public APIs with
-              modern web technologies—built with the MERN stack and curiosity.
+              modern web and mobile technologies—built with the MERN stack,
+              React Native, and curiosity.
             </p>
           </div>
 
           <div className='grid md:grid-cols-2 gap-8'>
-            {/* KTR */}
+            {/* Bill Progress */}
             <div className='bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 transition-colors duration-200'>
               <div className='p-8'>
                 <h3 className='text-xl font-medium text-slate-900 dark:text-white mb-4'>
-                  KTR (Know The Ropes)
+                  Bill Progress
                 </h3>
                 <p className='text-slate-600 dark:text-slate-400 mb-6 leading-relaxed'>
-                  Reviews congressional voting records and member data, scrapes
-                  House and Senate websites, processes vote data, provides vote
-                  tracking and member profiles, and provides pattern analysis
-                  with an admin dashboard.
+                  Congressional vote tracking platform available as a React web
+                  app and a React Native mobile app (iOS). Scrapes House and
+                  Senate websites, processes vote data, provides vote tracking
+                  and member profiles, and includes pattern analysis with an
+                  admin dashboard.
                 </p>
                 <div className='flex flex-wrap gap-2 mb-6'>
                   <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
                     MERN Stack
                   </span>
                   <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
-                    Redux Toolkit
+                    React Native / Expo
                   </span>
                   <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
-                    Cloudinary
+                    Redux Toolkit
                   </span>
                   <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
                     Congress API
@@ -235,23 +238,16 @@ export default function Home() {
                       Private
                     </span>
                   </div>
-                  <button
-                    onClick={() =>
-                      handleExternalLink(
-                        'https://ktr-c75c27a564a2.herokuapp.com/',
-                        'KTR'
-                      )
-                    }
-                    className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors relative group'
-                    title='Hosted on Heroku free tier - may take a moment to wake up'
+                  <a
+                    href='https://billprogress.com'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors'
                   >
                     Live Demo
-                    <span className='absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-slate-900 dark:bg-slate-700 text-white text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none'>
-                      Hosted on Heroku - may take a moment to wake up
-                    </span>
-                  </button>
+                  </a>
                   <a
-                    href='/projects/ktr'
+                    href='/projects/bill-progress'
                     className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors'
                   >
                     Project Details
@@ -550,7 +546,7 @@ export default function Home() {
       <footer className='py-8 px-6 lg:px-8 bg-slate-100 dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700'>
         <div className='max-w-6xl mx-auto text-center'>
           <p className='text-slate-600 dark:text-slate-400 text-sm'>
-            © 2025 Ramzi Kanazi. Built with Next.js & Tailwind CSS.
+            © 2026 Ramzi Kanazi. Built with Next.js & Tailwind CSS.
           </p>
         </div>
       </footer>

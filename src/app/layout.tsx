@@ -15,15 +15,18 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: 'Ramzi Kanazi - Full-Stack Developer',
   description:
-    'Full-stack developer specializing in web applications, primarily focused on React, Redux, Node.js, and modern development practices.',
+    'Full-stack developer specializing in web and mobile applications, primarily focused on React, React Native, Redux, Node.js, and modern development practices.',
   keywords: [
     'full-stack developer',
     'React',
+    'React Native',
     'Node.js',
     'TypeScript',
     'MongoDB',
     'Express',
+    'Expo',
     'web application development',
+    'mobile application development',
   ],
   authors: [{ name: 'Ramzi Kanazi' }],
   icons: {
@@ -42,7 +45,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Ramzi Kanazi - Full-Stack Developer',
-    description: 'Full-stack developer specializing in web applications',
+    description: 'Full-stack developer specializing in web and mobile applications',
     type: 'website',
   },
 };

@@ -49,31 +49,29 @@ export default function PlacerCaseStudy() {
                 Background
               </h2>
               <ExpandableStory
-                teaser='I wanted to create an app using Claude Code from the beginning. I made this entirely by vibe coding. I guess Claude really made this.'
+                teaser='I wanted to build this project with Claude Code from the start—a full-stack app scaffolded through conversational AI-assisted development.'
                 fullStory={
                   <>
                     <p>
-                      I wanted to create an app using Claude Code from the
-                      beginning. I made this entirely by vibe coding. I guess
-                      Claude really made this. In fact, after asking, Claude
-                      suggested that I should just tell it what to do to keep
-                      everything in sync. This turned out much better than I
-                      expected. Claude prepared a full-stack app, even
-                      connecting to Cloudinary, right away. I just created the
-                      .env and had it go to work.
+                      I wanted to build this project with Claude Code from the
+                      start. I described the features at a high level and
+                      iterated from there. Claude scaffolded the full-stack app
+                      quickly—Express backend, React frontend, even the
+                      Cloudinary integration—and I focused on directing the
+                      architecture and refining the details.
                     </p>
                     <p>
-                      Because I knew that Claude was looking for higher level,
-                      conversational language, it was pretty easy to work with,
-                      but I&apos;m learning when it&apos;s helpful to be more
-                      specific. I ended up stuck in a conversation loop or two.
-                      It&apos;s strangely not as frustrating as I would have
-                      thought, but it&apos;s not very fun.
+                      Working conversationally with AI is a different workflow.
+                      I&apos;m learning when to stay high-level versus when
+                      being specific saves time. There were a couple of loops
+                      to work through, but the overall process was surprisingly
+                      productive and a good way to explore AI-assisted
+                      development.
                     </p>
                     <p>
-                      Thanks for this app Claude. Now anyone can clone Placer,
-                      and create their own little vacation portal that they and
-                      their friends/family can privately share!
+                      The result is a location-sharing platform that anyone can
+                      clone and use as their own private vacation portal to
+                      share with friends and family.
                     </p>
                   </>
                 }

@@ -49,12 +49,12 @@ export default function MailChampCaseStudy() {
                 Background
               </h2>
               <ExpandableStory
-                teaser="MailChimp doesn't give us the customized reports that we need, and we used spend quite a bit of time preparing our own."
+                teaser="MailChimp doesn't give us the customized reports that we need, and we used to spend quite a bit of time preparing our own."
                 fullStory={
                   <>
                     <p>
                       MailChimp doesn&apos;t give us the customized reports that
-                      we need at my job, and we used spend quite a bit of time
+                      we need at my job, and we used to spend quite a bit of time
                       preparing our own. We&apos;d have to navigate its (often
                       slow loading) interface and copy data between pages to
                       then calculate engagement metrics in spreadsheets. Then

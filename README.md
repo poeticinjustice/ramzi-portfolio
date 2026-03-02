@@ -16,7 +16,7 @@ My personal portfolio showcasing full-stack development projects built with the 
 src/
 ├── app/
 │   ├── projects/
-│   │   ├── ktr/              # KTR case study
+│   │   ├── bill-progress/    # Bill Progress case study
 │   │   ├── nyc-jobs/         # NYC Jobs case study
 │   │   ├── placer/           # Placer case study
 │   │   └── mailchamp/        # MailChamp case study
@@ -43,7 +43,7 @@ src/
 
 ## 🛠️ Projects Featured
 
-- **KTR** - Congressional vote tracking with Python web scraping
+- **Bill Progress** - Congressional vote tracking with React web app, React Native iOS app, and Python web scraping
 - **NYC Jobs** - Job search platform with 6,000+ NYC government positions
 - **Placer** - Location discovery with geolocation and photo sharing
 - **MailChamp** - Mailchimp analytics dashboard with RTK Query

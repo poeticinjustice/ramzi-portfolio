@@ -6,26 +6,76 @@ import ImageModal from '@/components/ImageModal';
 import ExpandableStory from '@/components/ExpandableStory';
 import ProjectHero from '@/components/project/ProjectHero';
 import ProjectGallery from '@/components/project/ProjectGallery';
+import MobileCarousel from '@/components/project/MobileCarousel';
 import FeatureCard from '@/components/project/FeatureCard';
 import HighlightCard from '@/components/project/HighlightCard';
 import TechStackItem from '@/components/project/TechStackItem';
 import SectionContainer from '@/components/project/SectionContainer';
 import { useImageModal } from '@/hooks/useImageModal';
 
-export default function KTRCaseStudy() {
+export default function BillProgressCaseStudy() {
   const { isModalOpen, modalImageIndex, openModal, closeModal } =
     useImageModal();
+  const {
+    isModalOpen: isMobileModalOpen,
+    modalImageIndex: mobileModalIndex,
+    openModal: openMobileModal,
+    closeModal: closeMobileModal,
+  } = useImageModal();
 
-  const ktrImages = [
+  const mobileScreenshots = [
+    {
+      src: '/images/bill-progress/mobile-members.png',
+      alt: 'Bill Progress mobile app - Members list showing congress members',
+      caption: 'Members - Browse congress members with party and state info',
+    },
+    {
+      src: '/images/bill-progress/mobile-my-reps.png',
+      alt: 'Bill Progress mobile app - My Representatives with interactive map',
+      caption: 'My Reps - Find your representatives with an interactive map',
+    },
+    {
+      src: '/images/bill-progress/mobile-legislation.png',
+      alt: 'Bill Progress mobile app - Legislation votes and bills',
+      caption: 'Legislation - Browse and filter congressional votes and bills',
+    },
+    {
+      src: '/images/bill-progress/mobile-roll-call.png',
+      alt: 'Bill Progress mobile app - Roll call vote details',
+      caption: 'Roll Call - Detailed vote breakdown by party and member',
+    },
+    {
+      src: '/images/bill-progress/mobile-bill-details.png',
+      alt: 'Bill Progress mobile app - Bill details with full bill text',
+      caption: 'Bill Details - Read full bill text and track progress',
+    },
+    {
+      src: '/images/bill-progress/mobile-timeline.png',
+      alt: 'Bill Progress mobile app - Bill progress timeline',
+      caption: 'Timeline - Track a bill through the legislative process',
+    },
+    {
+      src: '/images/bill-progress/mobile-comparison.png',
+      alt: 'Bill Progress mobile app - Member comparison view',
+      caption: 'Compare - Side-by-side comparison of member voting records',
+    },
+    {
+      src: '/images/bill-progress/mobile-profile.png',
+      alt: 'Bill Progress mobile app - Member profile with voting history',
+      caption: 'Profile - Detailed member profile with voting history',
+    },
+  ];
+
+  const billProgressImages = [
     {
       src: 'https://res.cloudinary.com/ramziscloud/image/upload/v1759687768/portfolio/vk2nu8df6n4ikyz02kmp.png',
-      alt: 'Know The Ropes gallery of congress members - includes general information and links to member&apos;s comprehensive vote details',
+      alt: "Bill Progress gallery of congress members - includes general information and links to member's comprehensive vote details",
       caption:
-        'Congress Member View - Links to member&apos;s comprehensive vote details with member records and community discussion features',
+        "Congress Member View - Links to member's comprehensive vote details with member records and community discussion features",
     },
     {
       src: 'https://res.cloudinary.com/ramziscloud/image/upload/v1759687767/portfolio/vksdlh0aoqkomlormm0v.png',
-      alt: 'Know The Ropes Dashboard - Congressional vote browsing and filtering interface',
+      alt: 'Bill Progress Dashboard - Congressional vote browsing and filtering interface',
       caption:
         'Dashboard View - Update, browse and filter thousands of congressional votes with real-time data from House and Senate',
     },
@@ -36,7 +86,7 @@ export default function KTRCaseStudy() {
       <Navigation />
 
       <ProjectHero
-        title='Know The Ropes'
+        title='Bill Progress'
         subtitle='Congressional Information & Community Discussion Platform'
       />
 
@@ -49,7 +99,8 @@ export default function KTRCaseStudy() {
                 Background
               </h2>
               <ExpandableStory
-                teaser='This was an exciting project for me. I wanted to use the ProPublica Congress API, but they stopped giving out API keys and ultimately sunsetted the project before I had a chance to get access to it.'
+                defaultExpanded
+                teaser='This was an exciting project for me. I wanted to use the ProPublica Congress API, but they stopped giving out API keys and ultimately sunsetted the project before I had a chance to access it.'
                 fullStory={
                   <>
                     <p>
@@ -59,13 +110,15 @@ export default function KTRCaseStudy() {
                       chance to access it. It became very exciting when I
                       discovered a web scraping tool that pulls data from the
                       house and senate pages. I think some people from the
-                      ProPublica and GovTrack teams maintain that tools which
-                      became very helpful for me to update KTR&apos;s database.
+                      ProPublica and GovTrack teams maintain that tool, which
+                      became very helpful for me to update the database.
                     </p>
                     <p>
                       It&apos;s a python tool, and I use it in my admin panels.
-                      I periodically seed the database with updated info, and I
-                      hope to make the process automatic at some point. GovTrack
+                      I also have sync scripts running on Heroku Scheduler that
+                      pull incremental updates throughout the day—probing
+                      official House and Senate sources for new votes and syncing
+                      member and bill data from the Congress.gov API. GovTrack
                       is a fantastic website with a ton of information about
                       what&apos;s going on in Congress. I wanted to create a
                       simpler site that just tracks congress members and their
@@ -74,8 +127,11 @@ export default function KTRCaseStudy() {
                       trends.
                     </p>
                     <p>
-                      I think it&apos;s pretty interesting. Check it out. It
-                      will be evolving.
+                      The project has grown into a cross-platform experience
+                      with both a React web app and a React Native mobile app
+                      available on the App Store for iPhone and iPad. I think
+                      it&apos;s pretty interesting. Check it out. It will be
+                      evolving.
                     </p>
                   </>
                 }
@@ -88,17 +144,24 @@ export default function KTRCaseStudy() {
                   Live Demo
                 </h3>
                 <a
-                  href='https://ktr-c75c27a564a2.herokuapp.com/'
+                  href='https://billprogress.com'
                   target='_blank'
                   rel='noopener noreferrer'
-                  className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm transition-colors relative group inline-block'
-                  title='Hosted on Heroku free tier - may take a moment to wake up'
+                  className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm transition-colors'
                 >
-                  ktr-c75c27a564a2.herokuapp.com
-                  <span className='absolute bottom-full left-0 mb-2 px-3 py-2 bg-slate-900 dark:bg-slate-700 text-white text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none'>
-                    Hosted on Heroku - may take a moment to wake up
-                  </span>
+                  billprogress.com
                 </a>
+              </div>
+              <div className='bg-white dark:bg-slate-900 p-6 border border-slate-200 dark:border-slate-700'>
+                <h3 className='text-lg font-medium text-slate-900 dark:text-white mb-3'>
+                  Mobile App
+                </h3>
+                <p className='text-slate-600 dark:text-slate-400 text-sm'>
+                  Available on the App Store for iPhone and iPad
+                </p>
+                <p className='text-slate-500 dark:text-slate-500 text-xs mt-1'>
+                  com.billprogress.app
+                </p>
               </div>
               <div className='bg-white dark:bg-slate-900 p-6 border border-slate-200 dark:border-slate-700'>
                 <h3 className='text-lg font-medium text-slate-900 dark:text-white mb-3'>
@@ -118,7 +181,13 @@ export default function KTRCaseStudy() {
         </div>
       </section>
 
-      <ProjectGallery images={ktrImages} onImageClick={openModal} />
+      <ProjectGallery images={billProgressImages} onImageClick={openModal} />
+
+      {/* Mobile App Carousel */}
+      <MobileCarousel
+        images={mobileScreenshots}
+        onImageClick={openMobileModal}
+      />
 
       {/* Key Features */}
       <SectionContainer variant='gradient'>
@@ -195,6 +264,25 @@ export default function KTRCaseStudy() {
                   strokeLinecap='round'
                   strokeLinejoin='round'
                   strokeWidth={1.5}
+                  d='M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z'
+                />
+              </svg>
+            }
+            title='Cross-Platform Mobile App'
+            description='Native iOS app built with React Native and Expo SDK 54, available on the App Store for iPhone and iPad with the same congressional data and features.'
+          />
+          <FeatureCard
+            icon={
+              <svg
+                className='w-6 h-6 text-slate-600 dark:text-slate-400'
+                fill='none'
+                stroke='currentColor'
+                viewBox='0 0 24 24'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth={1.5}
                   d='M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z'
                 />
               </svg>
@@ -210,7 +298,7 @@ export default function KTRCaseStudy() {
         <h2 className='text-2xl font-medium text-slate-900 dark:text-white mb-12 text-center'>
           Technology Stack
         </h2>
-        <div className='grid md:grid-cols-2 gap-12'>
+        <div className='grid md:grid-cols-3 gap-12'>
           <div>
             <h3 className='text-xl font-medium text-slate-900 dark:text-white mb-6'>
               Backend
@@ -226,7 +314,7 @@ export default function KTRCaseStudy() {
           </div>
           <div>
             <h3 className='text-xl font-medium text-slate-900 dark:text-white mb-6'>
-              Frontend
+              Web Frontend
             </h3>
             <div className='space-y-4'>
               <TechStackItem text='React 19 with functional components and hooks' />
@@ -234,6 +322,16 @@ export default function KTRCaseStudy() {
               <TechStackItem text='Bootstrap 5 for responsive UI components' />
               <TechStackItem text='Vite and monorepo architecture for development and builds' />
               <TechStackItem text='React Router for client-side navigation' />
+            </div>
+          </div>
+          <div>
+            <h3 className='text-xl font-medium text-slate-900 dark:text-white mb-6'>
+              Mobile
+            </h3>
+            <div className='space-y-4'>
+              <TechStackItem text='React Native with Expo SDK 54' />
+              <TechStackItem text='Available on App Store for iPhone and iPad' />
+              <TechStackItem text='Native iOS experience with shared backend' />
             </div>
           </div>
         </div>
@@ -246,69 +344,87 @@ export default function KTRCaseStudy() {
             State Management Flow
           </h2>
           <p className='text-slate-600 dark:text-slate-400 text-center mb-8 max-w-3xl mx-auto'>
-            Hybrid Redux architecture combining standard Redux slice for
-            authentication with RTK Query for automated API caching and
-            tag-based invalidation.
+            Shared Express/MongoDB backend serving both the React web app
+            (Redux Toolkit + RTK Query) and the React Native mobile app (Expo
+            SDK 54). Both clients consume the same REST API with
+            platform-specific state management.
           </p>
           <div className='flex justify-center'>
             <div className='bg-white dark:bg-slate-900 p-8 border border-slate-200 dark:border-slate-700 rounded-lg w-full'>
               <MermaidDiagram
                 chart={`
-flowchart LR
-    A[User Action] --> B{Action Type}
+flowchart TB
+    subgraph Clients
+        direction LR
+        W[React Web App<br/>Redux + RTK Query]
+        M[React Native App<br/>Expo SDK 54]
+    end
 
-    B -->|Login/Logout| C[authSlice]
-    B -->|Fetch Data| D[RTK Query]
-    B -->|Modify Data| E[RTK Mutation]
+    W --> API[Express REST API<br/>Node.js Backend]
+    M --> API
 
-    C --> F[Redux Store]
-    F --> G[localStorage]
+    API --> AUTH[JWT Authentication<br/>30-day tokens]
+    API --> SCRAPER[Python Scraper<br/>lxml + House/Senate]
 
-    D --> H{Cache?}
-    H -->|Hit| I[Return Data]
-    H -->|Miss| J[API Call]
-    J --> K[Cache Data]
+    AUTH --> DB[(MongoDB Atlas<br/>Members, Votes,<br/>Posts, Users)]
+    SCRAPER --> DB
 
-    E --> L[API Call]
-    L --> M[Invalidate Tags]
-    M --> N[Auto-Refetch]
+    subgraph WebState["Web State"]
+        direction LR
+        AS[authSlice] --- RTK[RTK Query<br/>Cache + Tags]
+    end
 
-    I --> O[UI Update]
-    K --> O
-    N --> O
-    G --> O
+    subgraph MobileState["Mobile State"]
+        direction LR
+        MS[Auth Context] --- MQ[API Layer]
+    end
 
-    style A fill:#4a90e2,stroke:#2563eb,stroke-width:2px,color:#fff
-    style C fill:#10b981,stroke:#059669,stroke-width:2px,color:#fff
-    style D fill:#10b981,stroke:#059669,stroke-width:2px,color:#fff
-    style E fill:#10b981,stroke:#059669,stroke-width:2px,color:#fff
-    style H fill:#f59e0b,stroke:#d97706,stroke-width:2px,color:#fff
-    style M fill:#ef4444,stroke:#dc2626,stroke-width:2px,color:#fff
-    style O fill:#8b5cf6,stroke:#7c3aed,stroke-width:2px,color:#fff
+    W --> WebState
+    M --> MobileState
+
+    WebState --> UI1[Web UI Update]
+    MobileState --> UI2[Mobile UI Update]
+
+    style W fill:#4a90e2,stroke:#2563eb,stroke-width:2px,color:#fff
+    style M fill:#4a90e2,stroke:#2563eb,stroke-width:2px,color:#fff
+    style API fill:#10b981,stroke:#059669,stroke-width:2px,color:#fff
+    style DB fill:#f59e0b,stroke:#d97706,stroke-width:2px,color:#fff
+    style SCRAPER fill:#ef4444,stroke:#dc2626,stroke-width:2px,color:#fff
+    style UI1 fill:#8b5cf6,stroke:#7c3aed,stroke-width:2px,color:#fff
+    style UI2 fill:#8b5cf6,stroke:#7c3aed,stroke-width:2px,color:#fff
 `}
-                id='ktr-state-flow'
+                id='bill-progress-state-flow'
               />
             </div>
           </div>
-          <div className='mt-8 grid md:grid-cols-2 gap-6'>
+          <div className='mt-8 grid md:grid-cols-3 gap-6'>
             <div className='bg-white dark:bg-slate-900 p-6 border border-slate-200 dark:border-slate-700 rounded-lg'>
               <h3 className='text-lg font-medium text-slate-900 dark:text-white mb-3'>
-                Authentication State
+                Shared Backend
               </h3>
               <p className='text-slate-600 dark:text-slate-400 text-sm leading-relaxed'>
-                Standard Redux slice managing user authentication with automatic
-                localStorage synchronization for persistent sessions (30-day
-                expiration).
+                Express REST API with MongoDB Atlas serves both web and mobile
+                clients. Python scraper updates congressional data from House
+                and Senate sites.
               </p>
             </div>
             <div className='bg-white dark:bg-slate-900 p-6 border border-slate-200 dark:border-slate-700 rounded-lg'>
               <h3 className='text-lg font-medium text-slate-900 dark:text-white mb-3'>
-                RTK Query API Layer
+                Web State (Redux)
               </h3>
               <p className='text-slate-600 dark:text-slate-400 text-sm leading-relaxed'>
-                Automated caching with tag-based invalidation for Users, Posts,
-                Congress Members, and Votes. Includes request deduplication and
-                background refetching.
+                Redux Toolkit with RTK Query for automated caching and
+                tag-based invalidation across Users, Posts, Congress Members,
+                and Votes.
+              </p>
+            </div>
+            <div className='bg-white dark:bg-slate-900 p-6 border border-slate-200 dark:border-slate-700 rounded-lg'>
+              <h3 className='text-lg font-medium text-slate-900 dark:text-white mb-3'>
+                Mobile State (Expo)
+              </h3>
+              <p className='text-slate-600 dark:text-slate-400 text-sm leading-relaxed'>
+                React Native with Expo SDK 54 for iOS. Native mobile
+                experience on iPhone and iPad, available on the App Store.
               </p>
             </div>
           </div>
@@ -371,12 +487,12 @@ flowchart LR
                   strokeLinecap='round'
                   strokeLinejoin='round'
                   strokeWidth={1.5}
-                  d='M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z'
+                  d='M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z'
                 />
               </svg>
             }
-            title='Member Profiles'
-            description='Current and former congressional members'
+            title='iOS App'
+            description='Native mobile experience on iPhone and iPad'
           />
           <HighlightCard
             icon={
@@ -400,12 +516,18 @@ flowchart LR
         </div>
       </SectionContainer>
 
-      {/* Image Modal */}
+      {/* Image Modals */}
       <ImageModal
-        images={ktrImages}
+        images={billProgressImages}
         isOpen={isModalOpen}
         onClose={closeModal}
         initialIndex={modalImageIndex}
+      />
+      <ImageModal
+        images={mobileScreenshots}
+        isOpen={isMobileModalOpen}
+        onClose={closeMobileModal}
+        initialIndex={mobileModalIndex}
       />
     </div>
   );
