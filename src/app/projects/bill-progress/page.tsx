@@ -1,7 +1,7 @@
 'use client';
 
 import Navigation from '@/components/Navigation';
-import MermaidDiagram from '@/components/MermaidDiagram';
+import MermaidDiagram from '@/components/LazyMermaidDiagram';
 import ImageModal from '@/components/ImageModal';
 import ExpandableStory from '@/components/ExpandableStory';
 import ProjectHero from '@/components/project/ProjectHero';
@@ -87,7 +87,7 @@ export default function BillProgressCaseStudy() {
 
       <ProjectHero
         title='Bill Progress'
-        subtitle='Congressional Information & Community Discussion Platform'
+        subtitle='Congressional Vote Tracking, Analysis & Community Platform'
       />
 
       {/* Background */}
@@ -117,21 +117,35 @@ export default function BillProgressCaseStudy() {
                       It&apos;s a python tool, and I use it in my admin panels.
                       I also have sync scripts running on Heroku Scheduler that
                       pull incremental updates throughout the day—probing
-                      official House and Senate sources for new votes and syncing
-                      member and bill data from the Congress.gov API. GovTrack
-                      is a fantastic website with a ton of information about
-                      what&apos;s going on in Congress. I wanted to create a
-                      simpler site that just tracks congress members and their
+                      official House and Senate sources for new votes and
+                      syncing member and bill data from the Congress.gov API.
+                      GovTrack is a fantastic website with a ton of information
+                      about what&apos;s going on in Congress. I wanted to create
+                      a simpler site that just tracks congress members and their
                       votes. I also wanted to give it more of a social aspect
                       where one can focus on members&apos; specific votes and
                       trends.
                     </p>
                     <p>
-                      The project has grown into a cross-platform experience
-                      with both a React web app and a React Native mobile app
-                      available on the App Store for iPhone and iPad. I think
-                      it&apos;s pretty interesting. Check it out. It will be
-                      evolving.
+                      Once the web app was in a good place, I wanted to bring it
+                      to mobile. I started exploring native iOS development with
+                      Swift and Xcode, which was a great learning experience—but
+                      I realized React Native would let me share the same Redux
+                      store and business logic across both platforms. That turned
+                      out to be the right call. The app is now on the App Store
+                      for iPhone and iPad, and the web and mobile clients both
+                      pull from the same shared packages in a monorepo.
+                    </p>
+                    <p>
+                      In 2026, I did a big overhaul—migrating to a monorepo with
+                      React 19 + Vite on web and React Native with Expo SDK 54
+                      on mobile, rebuilding the data pipeline with nightly sync
+                      scripts, adding FEC campaign finance data and member report
+                      cards, saved bill and vote tracking with new-activity
+                      alerts, and role management for moderated community posts.
+                      The shared Redux store across web and mobile has been one
+                      of the more interesting architectural decisions—10+ RTK
+                      Query slices all living in one shared package.
                     </p>
                   </>
                 }
@@ -290,6 +304,63 @@ export default function BillProgressCaseStudy() {
             title='Post & Discussion System'
             description='Social features allowing users to create posts about specific votes with embedded vote details and external links for community engagement.'
           />
+          <FeatureCard
+            icon={
+              <svg
+                className='w-6 h-6 text-slate-600 dark:text-slate-400'
+                fill='none'
+                stroke='currentColor'
+                viewBox='0 0 24 24'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth={1.5}
+                  d='M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z'
+                />
+              </svg>
+            }
+            title='Saved Bills & Vote Tracking'
+            description='Save bills and votes to follow. The app tracks new votes added since your last visit and surfaces them on your dashboard—so you never miss an update on legislation you care about.'
+          />
+          <FeatureCard
+            icon={
+              <svg
+                className='w-6 h-6 text-slate-600 dark:text-slate-400'
+                fill='none'
+                stroke='currentColor'
+                viewBox='0 0 24 24'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth={1.5}
+                  d='M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
+                />
+              </svg>
+            }
+            title='Campaign Finance Data'
+            description='FEC API integration surfaces campaign finance data on member profiles—donors, contribution totals, and PAC funding—linking voting patterns to financial backing.'
+          />
+          <FeatureCard
+            icon={
+              <svg
+                className='w-6 h-6 text-slate-600 dark:text-slate-400'
+                fill='none'
+                stroke='currentColor'
+                viewBox='0 0 24 24'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth={1.5}
+                  d='M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z'
+                />
+              </svg>
+            }
+            title='Member Report Cards'
+            description='Automated scoring and grading of congressional members based on voting history, party-line alignment, and participation rates—turning raw vote data into digestible performance summaries.'
+          />
         </div>
       </SectionContainer>
 
@@ -321,7 +392,7 @@ export default function BillProgressCaseStudy() {
               <TechStackItem text='Redux Toolkit with RTK Query for state management' />
               <TechStackItem text='Bootstrap 5 for responsive UI components' />
               <TechStackItem text='Vite and monorepo architecture for development and builds' />
-              <TechStackItem text='React Router for client-side navigation' />
+              <TechStackItem text='React Router v7 for client-side navigation' />
             </div>
           </div>
           <div>
@@ -341,57 +412,48 @@ export default function BillProgressCaseStudy() {
       <section className='py-16 px-6 lg:px-8 bg-slate-50 dark:bg-slate-800'>
         <div className='max-w-6xl mx-auto'>
           <h2 className='text-2xl font-medium text-slate-900 dark:text-white mb-8 text-center'>
-            State Management Flow
+            Architecture & State Management
           </h2>
           <p className='text-slate-600 dark:text-slate-400 text-center mb-8 max-w-3xl mx-auto'>
-            Shared Express/MongoDB backend serving both the React web app
-            (Redux Toolkit + RTK Query) and the React Native mobile app (Expo
-            SDK 54). Both clients consume the same REST API with
-            platform-specific state management.
+            Monorepo with a shared Redux store consumed by both the React web
+            app and the React Native mobile app. 10+ RTK Query slices—votes,
+            bills, members, finance, posts, notes, saves, follows—all inject
+            into a single base apiSlice in packages/shared.
           </p>
           <div className='flex justify-center'>
             <div className='bg-white dark:bg-slate-900 p-8 border border-slate-200 dark:border-slate-700 rounded-lg w-full'>
               <MermaidDiagram
                 chart={`
 flowchart TB
-    subgraph Clients
+    subgraph Clients["Client Apps"]
         direction LR
-        W[React Web App<br/>Redux + RTK Query]
-        M[React Native App<br/>Expo SDK 54]
+        W["React Web App<br/>React 19 + Vite"]
+        M["React Native App<br/>Expo SDK 54"]
     end
 
-    W --> API[Express REST API<br/>Node.js Backend]
-    M --> API
-
-    API --> AUTH[JWT Authentication<br/>30-day tokens]
-    API --> SCRAPER[Python Scraper<br/>lxml + House/Senate]
-
-    AUTH --> DB[(MongoDB Atlas<br/>Members, Votes,<br/>Posts, Users)]
-    SCRAPER --> DB
-
-    subgraph WebState["Web State"]
+    subgraph Shared["packages/shared"]
         direction LR
-        AS[authSlice] --- RTK[RTK Query<br/>Cache + Tags]
+        AS[authSlice] --- RTK["apiSlice (RTK Query)<br/>10+ injected slices"]
     end
 
-    subgraph MobileState["Mobile State"]
-        direction LR
-        MS[Auth Context] --- MQ[API Layer]
-    end
+    W --> Shared
+    M --> Shared
 
-    W --> WebState
-    M --> MobileState
+    Shared --> API["Express REST API<br/>Node.js + JWT"]
 
-    WebState --> UI1[Web UI Update]
-    MobileState --> UI2[Mobile UI Update]
+    API --> DB[(MongoDB Atlas)]
+    API --> CONG["Congress.gov API"]
+    API --> FEC["FEC Campaign<br/>Finance API"]
+    SCRAPER["Python Scraper<br/>lxml"] --> DB
+    API --> SCRAPER
 
     style W fill:#4a90e2,stroke:#2563eb,stroke-width:2px,color:#fff
     style M fill:#4a90e2,stroke:#2563eb,stroke-width:2px,color:#fff
     style API fill:#10b981,stroke:#059669,stroke-width:2px,color:#fff
     style DB fill:#f59e0b,stroke:#d97706,stroke-width:2px,color:#fff
     style SCRAPER fill:#ef4444,stroke:#dc2626,stroke-width:2px,color:#fff
-    style UI1 fill:#8b5cf6,stroke:#7c3aed,stroke-width:2px,color:#fff
-    style UI2 fill:#8b5cf6,stroke:#7c3aed,stroke-width:2px,color:#fff
+    style FEC fill:#8b5cf6,stroke:#7c3aed,stroke-width:2px,color:#fff
+    style CONG fill:#8b5cf6,stroke:#7c3aed,stroke-width:2px,color:#fff
 `}
                 id='bill-progress-state-flow'
               />
@@ -400,31 +462,32 @@ flowchart TB
           <div className='mt-8 grid md:grid-cols-3 gap-6'>
             <div className='bg-white dark:bg-slate-900 p-6 border border-slate-200 dark:border-slate-700 rounded-lg'>
               <h3 className='text-lg font-medium text-slate-900 dark:text-white mb-3'>
-                Shared Backend
+                Shared Redux Store
               </h3>
               <p className='text-slate-600 dark:text-slate-400 text-sm leading-relaxed'>
-                Express REST API with MongoDB Atlas serves both web and mobile
-                clients. Python scraper updates congressional data from House
-                and Senate sites.
+                Both clients import from packages/shared—one store, one set of
+                RTK Query slices covering votes, bills, members, finance, posts,
+                notes, saves, and follows.
               </p>
             </div>
             <div className='bg-white dark:bg-slate-900 p-6 border border-slate-200 dark:border-slate-700 rounded-lg'>
               <h3 className='text-lg font-medium text-slate-900 dark:text-white mb-3'>
-                Web State (Redux)
+                RTK Query Caching
               </h3>
               <p className='text-slate-600 dark:text-slate-400 text-sm leading-relaxed'>
-                Redux Toolkit with RTK Query for automated caching and
-                tag-based invalidation across Users, Posts, Congress Members,
-                and Votes.
+                Tag-based cache invalidation across all slices. Saved bills and
+                votes track new activity since your last visit, surfacing alerts
+                on your dashboard.
               </p>
             </div>
             <div className='bg-white dark:bg-slate-900 p-6 border border-slate-200 dark:border-slate-700 rounded-lg'>
               <h3 className='text-lg font-medium text-slate-900 dark:text-white mb-3'>
-                Mobile State (Expo)
+                Data Pipeline
               </h3>
               <p className='text-slate-600 dark:text-slate-400 text-sm leading-relaxed'>
-                React Native with Expo SDK 54 for iOS. Native mobile
-                experience on iPhone and iPad, available on the App Store.
+                Nightly scripts sync votes from Congress.gov and official
+                House/Senate sources. FEC API enriches member profiles with
+                campaign finance data on demand.
               </p>
             </div>
           </div>
@@ -436,7 +499,7 @@ flowchart TB
         <h2 className='text-2xl font-medium text-slate-900 dark:text-white mb-8 text-center'>
           Project Highlights
         </h2>
-        <div className='grid md:grid-cols-4 gap-8'>
+        <div className='grid md:grid-cols-3 gap-8'>
           <HighlightCard
             icon={
               <svg
@@ -512,6 +575,44 @@ flowchart TB
             }
             title='Community Discussion'
             description='Posts and comments on legislative activity'
+          />
+          <HighlightCard
+            icon={
+              <svg
+                className='w-8 h-8 text-slate-600 dark:text-slate-400'
+                fill='none'
+                stroke='currentColor'
+                viewBox='0 0 24 24'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth={1.5}
+                  d='M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z'
+                />
+              </svg>
+            }
+            title='Campaign Finance'
+            description='FEC data links donor money to member votes'
+          />
+          <HighlightCard
+            icon={
+              <svg
+                className='w-8 h-8 text-slate-600 dark:text-slate-400'
+                fill='none'
+                stroke='currentColor'
+                viewBox='0 0 24 24'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth={1.5}
+                  d='M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z'
+                />
+              </svg>
+            }
+            title='Report Cards'
+            description='Automated member scoring from voting history'
           />
         </div>
       </SectionContainer>

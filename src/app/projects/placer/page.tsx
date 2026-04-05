@@ -1,7 +1,7 @@
 'use client';
 
 import Navigation from '@/components/Navigation';
-import MermaidDiagram from '@/components/MermaidDiagram';
+import MermaidDiagram from '@/components/LazyMermaidDiagram';
 import ImageModal from '@/components/ImageModal';
 import ExpandableStory from '@/components/ExpandableStory';
 import ProjectHero from '@/components/project/ProjectHero';

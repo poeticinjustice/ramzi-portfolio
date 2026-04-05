@@ -17,7 +17,7 @@ export default function Home() {
     <div className='min-h-screen bg-white dark:bg-slate-900'>
       {/* Loading Toast */}
       {loadingLink && (
-        <div className='fixed bottom-4 right-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-3'>
+        <div role='status' aria-live='polite' className='fixed bottom-4 right-4 bg-slate-900 dark:bg-white text-white dark:text-slate-900 px-6 py-3 rounded-lg shadow-lg z-50 flex items-center gap-3'>
           <svg className='animate-spin h-5 w-5' viewBox='0 0 24 24'>
             <circle
               className='opacity-25'
@@ -42,6 +42,7 @@ export default function Home() {
 
       <Navigation />
 
+      <main id='main-content'>
       {/* Hero Section */}
       <section className='hero-gradient pt-24 pb-20 px-6 lg:px-8'>
         <div className='max-w-6xl mx-auto'>
@@ -50,9 +51,9 @@ export default function Home() {
               Full-Stack Developer
             </h1>
             <p className='text-xl md:text-2xl text-slate-600 dark:text-slate-400 mb-12 max-w-4xl mx-auto leading-relaxed'>
-              Building data-driven web and mobile applications that make
-              complex information accessible—from congressional voting records
-              to NYC job markets.
+              Building data-driven web and mobile applications that make complex
+              information accessible—from congressional voting records to NYC
+              job markets.
             </p>
             <div className='flex flex-col sm:flex-row gap-6 justify-center'>
               <a
@@ -81,16 +82,16 @@ export default function Home() {
             </h2>
             <p className='text-lg text-slate-600 dark:text-slate-400 max-w-4xl mx-auto leading-relaxed text-left'>
               From my Commodore 64 to building full-stack web and mobile
-              applications, I have had a lifelong interest in technology. With
-              a curiosity for data ranging from congressional voting records to
+              applications, I have had a lifelong interest in technology. With a
+              curiosity for data ranging from congressional voting records to
               NYC&apos;s open datasets, I build applications that make complex
               information more accessible. Working with the MERN stack, React
               Native, and Redux Toolkit—and familiarity with tools like Claude
               Code, Cursor, and Xcode—I create platforms that handle everything
               from tracking thousands of congressional votes to streamlining
-              email marketing analytics. I&apos;m drawn to projects that
-              explore what&apos;s possible when you combine interesting APIs
-              with modern web technologies.
+              email marketing analytics. I&apos;m drawn to projects that explore
+              what&apos;s possible when you combine interesting APIs with modern
+              web technologies.
             </p>
           </div>
 
@@ -115,8 +116,8 @@ export default function Home() {
                 Frontend Development
               </h3>
               <p className='text-sm text-slate-600 dark:text-slate-400 leading-relaxed'>
-                React 19, React Native, Redux Toolkit, Tailwind CSS,
-                Bootstrap, Vite, Cloudinary, Leaflet Maps
+                React 19, React Native, Redux Toolkit, Tailwind CSS, Bootstrap,
+                Vite, Cloudinary, Leaflet Maps
               </p>
             </div>
 
@@ -193,15 +194,17 @@ export default function Home() {
                   Bill Progress
                 </h3>
                 <p className='text-slate-600 dark:text-slate-400 mb-6 leading-relaxed'>
-                  Congressional vote tracking platform available as a React web
-                  app and a React Native mobile app (iOS). Scrapes House and
-                  Senate websites, processes vote data, provides vote tracking
-                  and member profiles, and includes pattern analysis with an
-                  admin dashboard.
+                  Full-stack platform for tracking congressional votes, bills,
+                  and members on web and iOS. Features voting history, member
+                  report cards, FEC campaign finance data, community posts, and
+                  bill monitoring with new-vote alerts.
                 </p>
                 <div className='flex flex-wrap gap-2 mb-6'>
                   <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
                     MERN Stack
+                  </span>
+                  <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
+                    React 19 + Vite
                   </span>
                   <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
                     React Native / Expo
@@ -211,6 +214,9 @@ export default function Home() {
                   </span>
                   <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
                     Congress API
+                  </span>
+                  <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
+                    FEC API
                   </span>
                 </div>
                 <div className='flex gap-6'>
@@ -263,11 +269,10 @@ export default function Home() {
                   NYC Jobs
                 </h3>
                 <p className='text-slate-600 dark:text-slate-400 mb-6 leading-relaxed'>
-                  Job search platform for thousands of NYC government positions.
-                  Searches by category, location, salary, and keywords. Includes
-                  note-taking with priority levels and tags for tracking
-                  applications. Links directly to official job postings for
-                  application.
+                  Job search platform aggregating NYC, federal, and NYS
+                  government positions. Track applications through a full
+                  pipeline, browse jobs on a map, save searches, and keep notes
+                  with priority levels and tags.
                 </p>
                 <div className='flex flex-wrap gap-2 mb-6'>
                   <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
@@ -280,7 +285,10 @@ export default function Home() {
                     NYC Open Data
                   </span>
                   <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
-                    JWT Auth
+                    USA Jobs API
+                  </span>
+                  <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
+                    Mapbox GL
                   </span>
                 </div>
                 <div className='flex gap-6'>
@@ -296,7 +304,7 @@ export default function Home() {
                     onClick={() =>
                       handleExternalLink(
                         'https://nyc-jobs-app.onrender.com/',
-                        'NYC Jobs'
+                        'NYC Jobs',
                       )
                     }
                     className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors relative group'
@@ -417,7 +425,7 @@ export default function Home() {
                     onClick={() =>
                       handleExternalLink(
                         'https://placer-app-cffc6463c817.herokuapp.com',
-                        'Placer'
+                        'Placer',
                       )
                     }
                     className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors relative group'
@@ -541,6 +549,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      </main>
 
       {/* Footer */}
       <footer className='py-8 px-6 lg:px-8 bg-slate-100 dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700'>

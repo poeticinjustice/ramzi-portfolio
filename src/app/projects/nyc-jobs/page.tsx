@@ -1,7 +1,7 @@
 'use client';
 
 import Navigation from '@/components/Navigation';
-import MermaidDiagram from '@/components/MermaidDiagram';
+import MermaidDiagram from '@/components/LazyMermaidDiagram';
 import ImageModal from '@/components/ImageModal';
 import ExpandableStory from '@/components/ExpandableStory';
 import ProjectHero from '@/components/project/ProjectHero';
@@ -36,7 +36,7 @@ export default function NYCJobsCaseStudy() {
 
       <ProjectHero
         title='NYC Jobs'
-        subtitle='New York City Job Search Application'
+        subtitle='Government Job Search & Application Tracker'
       />
 
       {/* Background */}
@@ -57,7 +57,8 @@ export default function NYCJobsCaseStudy() {
                       parks and job postings, you can find much of what&apos;s
                       out in the city right online. I wanted to learn more about
                       their Open Data portal, so I decided to make a site using
-                      their public Jobs NYC Postings API endpoint.
+                      their public Jobs NYC Postings API endpoint and process
+                      6,000+ job postings with advanced filtering and caching.
                     </p>
                     <p>
                       The city&apos;s own jobs site is very nice. First, it
@@ -132,12 +133,20 @@ export default function NYCJobsCaseStudy() {
           <div className='space-y-6'>
             <div className='bg-white dark:bg-slate-900 p-6 border border-slate-200 dark:border-slate-700'>
               <h3 className='text-lg font-medium text-slate-900 dark:text-white mb-3'>
-                Advanced Job Search System
+                Dual Job Search — NYC & Federal
               </h3>
               <ul className='space-y-2 text-slate-600 dark:text-slate-400 text-sm'>
                 <li className='flex items-start space-x-2'>
                   <div className='w-1.5 h-1.5 bg-slate-400 rounded-full mt-2 flex-shrink-0'></div>
-                  <span>Real-time search with caching</span>
+                  <span>
+                    NYC Open Data API — 6,000+ city government postings
+                  </span>
+                </li>
+                <li className='flex items-start space-x-2'>
+                  <div className='w-1.5 h-1.5 bg-slate-400 rounded-full mt-2 flex-shrink-0'></div>
+                  <span>
+                    USA Jobs API — federal positions alongside city roles
+                  </span>
                 </li>
                 <li className='flex items-start space-x-2'>
                   <div className='w-1.5 h-1.5 bg-slate-400 rounded-full mt-2 flex-shrink-0'></div>
@@ -159,37 +168,64 @@ export default function NYCJobsCaseStudy() {
 
             <div className='bg-white dark:bg-slate-900 p-6 border border-slate-200 dark:border-slate-700'>
               <h3 className='text-lg font-medium text-slate-900 dark:text-white mb-3'>
-                Comprehensive Notes Management
+                Notes Management
               </h3>
               <ul className='space-y-2 text-slate-600 dark:text-slate-400 text-sm'>
                 <li className='flex items-start space-x-2'>
                   <div className='w-1.5 h-1.5 bg-slate-400 rounded-full mt-2 flex-shrink-0'></div>
-                  <span>
-                    Job-linked note creation with automatic job data fetching
-                  </span>
+                  <span>Job-linked notes with automatic job data fetching</span>
                 </li>
                 <li className='flex items-start space-x-2'>
                   <div className='w-1.5 h-1.5 bg-slate-400 rounded-full mt-2 flex-shrink-0'></div>
                   <span>
-                    Note categorization (general, interview, application,
-                    followup, research)
+                    Note types (general, interview, application, followup,
+                    research) with priority levels
                   </span>
                 </li>
                 <li className='flex items-start space-x-2'>
                   <div className='w-1.5 h-1.5 bg-slate-400 rounded-full mt-2 flex-shrink-0'></div>
-                  <span>Priority levels and tagging system</span>
-                </li>
-                <li className='flex items-start space-x-2'>
-                  <div className='w-1.5 h-1.5 bg-slate-400 rounded-full mt-2 flex-shrink-0'></div>
-                  <span>
-                    Advanced filtering and pagination for large note collections
-                  </span>
+                  <span>Advanced filtering, pagination, and CSV export</span>
                 </li>
               </ul>
             </div>
           </div>
 
           <div className='space-y-6'>
+            <div className='bg-white dark:bg-slate-900 p-6 border border-slate-200 dark:border-slate-700'>
+              <h3 className='text-lg font-medium text-slate-900 dark:text-white mb-3'>
+                Map View, Saves & Searches
+              </h3>
+              <ul className='space-y-2 text-slate-600 dark:text-slate-400 text-sm'>
+                <li className='flex items-start space-x-2'>
+                  <div className='w-1.5 h-1.5 bg-slate-400 rounded-full mt-2 flex-shrink-0'></div>
+                  <span>
+                    Interactive Mapbox GL map with clustered job pins and static
+                    geocoding
+                  </span>
+                </li>
+                <li className='flex items-start space-x-2'>
+                  <div className='w-1.5 h-1.5 bg-slate-400 rounded-full mt-2 flex-shrink-0'></div>
+                  <span>
+                    Save searches by name and rerun with one click (up to 20)
+                  </span>
+                </li>
+                <li className='flex items-start space-x-2'>
+                  <div className='w-1.5 h-1.5 bg-slate-400 rounded-full mt-2 flex-shrink-0'></div>
+                  <span>
+                    Save jobs and track through an application pipeline
+                    (interested → applied → interviewing → offered/rejected)
+                  </span>
+                </li>
+                <li className='flex items-start space-x-2'>
+                  <div className='w-1.5 h-1.5 bg-slate-400 rounded-full mt-2 flex-shrink-0'></div>
+                  <span>
+                    Log application dates, interview dates, followup dates, and
+                    document links per job
+                  </span>
+                </li>
+              </ul>
+            </div>
+
             <div className='bg-white dark:bg-slate-900 p-6 border border-slate-200 dark:border-slate-700'>
               <h3 className='text-lg font-medium text-slate-900 dark:text-white mb-3'>
                 User Management & Authentication
@@ -207,37 +243,9 @@ export default function NYCJobsCaseStudy() {
                 </li>
                 <li className='flex items-start space-x-2'>
                   <div className='w-1.5 h-1.5 bg-slate-400 rounded-full mt-2 flex-shrink-0'></div>
-                  <span>Profile management and password security</span>
-                </li>
-                <li className='flex items-start space-x-2'>
-                  <div className='w-1.5 h-1.5 bg-slate-400 rounded-full mt-2 flex-shrink-0'></div>
                   <span>
                     Admin dashboard for user management and system analytics
                   </span>
-                </li>
-              </ul>
-            </div>
-
-            <div className='bg-white dark:bg-slate-900 p-6 border border-slate-200 dark:border-slate-700'>
-              <h3 className='text-lg font-medium text-slate-900 dark:text-white mb-3'>
-                Modern User Experience
-              </h3>
-              <ul className='space-y-2 text-slate-600 dark:text-slate-400 text-sm'>
-                <li className='flex items-start space-x-2'>
-                  <div className='w-1.5 h-1.5 bg-slate-400 rounded-full mt-2 flex-shrink-0'></div>
-                  <span>Mobile-first responsive design</span>
-                </li>
-                <li className='flex items-start space-x-2'>
-                  <div className='w-1.5 h-1.5 bg-slate-400 rounded-full mt-2 flex-shrink-0'></div>
-                  <span>Real-time feedback with toast notifications</span>
-                </li>
-                <li className='flex items-start space-x-2'>
-                  <div className='w-1.5 h-1.5 bg-slate-400 rounded-full mt-2 flex-shrink-0'></div>
-                  <span>Loading states and error handling</span>
-                </li>
-                <li className='flex items-start space-x-2'>
-                  <div className='w-1.5 h-1.5 bg-slate-400 rounded-full mt-2 flex-shrink-0'></div>
-                  <span>Accessibility features and keyboard navigation</span>
                 </li>
               </ul>
             </div>
@@ -261,6 +269,7 @@ export default function NYCJobsCaseStudy() {
               <TechStackItem text='Mongoose ODM with virtual fields and validation' />
               <TechStackItem text='JWT authentication with role-based access' />
               <TechStackItem text='Security middleware (Helmet, bcryptjs, rate limiting)' />
+              <TechStackItem text='Jest test suite — integration and unit coverage' />
             </div>
           </div>
           <div>
@@ -272,7 +281,8 @@ export default function NYCJobsCaseStudy() {
               <TechStackItem text='Redux Toolkit with async thunks' />
               <TechStackItem text='React Router v6 with protected routes' />
               <TechStackItem text='Tailwind CSS for responsive design' />
-              <TechStackItem text='React Hook Form with built-in validation' />
+              <TechStackItem text='Mapbox GL for interactive job map with clustering and geolocation' />
+              <TechStackItem text='NYC Open Data API · USA Jobs API · NYS Jobs' />
             </div>
           </div>
         </div>
@@ -307,8 +317,18 @@ export default function NYCJobsCaseStudy() {
               Data Integration
             </h3>
             <p className='text-slate-600 dark:text-slate-400 leading-relaxed'>
-              Connects to NYC Jobs API with caching to respect rate limits.
-              Error handling with timeout protection.
+              Connects to NYC Open Data Jobs API and the USA Jobs federal API
+              with caching to respect rate limits. Error handling with timeout
+              protection and source badges to distinguish listings.
+            </p>
+          </div>
+          <div className='bg-white dark:bg-slate-900 p-8 border border-slate-200 dark:border-slate-700'>
+            <h3 className='text-lg font-medium text-slate-900 dark:text-white mb-3'>
+              Test Coverage
+            </h3>
+            <p className='text-slate-600 dark:text-slate-400 leading-relaxed'>
+              Jest test suite covering integration tests (auth, jobs, notes,
+              dashboard routes) and unit tests (middleware, job helpers).
             </p>
           </div>
         </div>
@@ -321,9 +341,10 @@ export default function NYCJobsCaseStudy() {
             State Management Flow
           </h2>
           <p className='text-slate-600 dark:text-slate-400 text-center mb-8 max-w-3xl mx-auto'>
-            Redux Toolkit manages the application state, handling user
-            authentication, job search results, and personal notes with
-            efficient caching and optimistic updates.
+            Five Redux Toolkit slices cover auth, job search, notes, saved
+            searches, and the dashboard. NYC jobs are refreshed every 6 hours
+            server-side via a cron job and served from MongoDB. Federal and NYS
+            jobs are fetched live.
           </p>
           <div className='flex justify-center'>
             <div className='bg-white dark:bg-slate-900 p-8 border border-slate-200 dark:border-slate-700 rounded-lg w-full'>
@@ -333,30 +354,34 @@ flowchart LR
     A[User Action] --> B{Action Type}
 
     B -->|Auth| C[authSlice]
-    B -->|Search Jobs| D[jobsSlice]
-    B -->|Manage Notes| E[notesSlice]
+    B -->|Jobs| D[jobsSlice]
+    B -->|Notes| E[notesSlice]
+    B -->|Searches| F[searchesSlice]
+    B -->|Dashboard| G[dashboardSlice]
 
-    C --> F[Redux Store]
-    F --> G[localStorage]
+    C --> LS[localStorage]
 
-    D --> H[NYC Jobs API]
-    H --> I[Cache Results]
-    I --> J[Update Jobs State]
+    D --> H{Job Source}
+    H -->|NYC| I[MongoDB Cache<br/>6h cron refresh]
+    H -->|Federal / NYS| J[Live API Call]
 
     E --> K[Backend API]
-    K --> L[CRUD Operations]
-    L --> M[Update Notes State]
+    F --> K
+    G --> K
 
-    J --> N[UI Update]
-    M --> N
-    G --> N
+    I --> UI[UI Update]
+    J --> UI
+    K --> UI
+    LS --> UI
 
     style A fill:#4a90e2,stroke:#2563eb,stroke-width:2px,color:#fff
     style C fill:#10b981,stroke:#059669,stroke-width:2px,color:#fff
     style D fill:#10b981,stroke:#059669,stroke-width:2px,color:#fff
     style E fill:#10b981,stroke:#059669,stroke-width:2px,color:#fff
+    style F fill:#10b981,stroke:#059669,stroke-width:2px,color:#fff
+    style G fill:#10b981,stroke:#059669,stroke-width:2px,color:#fff
     style I fill:#f59e0b,stroke:#d97706,stroke-width:2px,color:#fff
-    style N fill:#8b5cf6,stroke:#7c3aed,stroke-width:2px,color:#fff
+    style UI fill:#8b5cf6,stroke:#7c3aed,stroke-width:2px,color:#fff
 `}
                 id='nyc-jobs-state-flow'
               />
@@ -370,7 +395,7 @@ flowchart LR
         <h2 className='text-2xl font-medium text-slate-900 dark:text-white mb-8 text-center'>
           Project Highlights
         </h2>
-        <div className='grid md:grid-cols-4 gap-8'>
+        <div className='grid md:grid-cols-3 gap-8'>
           <HighlightCard
             icon={
               <svg
@@ -387,8 +412,33 @@ flowchart LR
                 />
               </svg>
             }
-            title='Thousands of Job Postings'
-            description='Searchable NYC government positions'
+            title='6,000+ Job Postings'
+            description='NYC city + federal positions in one search'
+          />
+          <HighlightCard
+            icon={
+              <svg
+                className='w-8 h-8 text-slate-600 dark:text-slate-400'
+                fill='none'
+                stroke='currentColor'
+                viewBox='0 0 24 24'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth={1.5}
+                  d='M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z'
+                />
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth={1.5}
+                  d='M15 11a3 3 0 11-6 0 3 3 0 016 0z'
+                />
+              </svg>
+            }
+            title='Map View'
+            description='Browse jobs on an interactive Mapbox GL map'
           />
           <HighlightCard
             icon={
@@ -427,6 +477,25 @@ flowchart LR
             }
             title='Advanced Filtering'
             description='Multi-criteria search with real-time results'
+          />
+          <HighlightCard
+            icon={
+              <svg
+                className='w-8 h-8 text-slate-600 dark:text-slate-400'
+                fill='none'
+                stroke='currentColor'
+                viewBox='0 0 24 24'
+              >
+                <path
+                  strokeLinecap='round'
+                  strokeLinejoin='round'
+                  strokeWidth={1.5}
+                  d='M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z'
+                />
+              </svg>
+            }
+            title='Saved Searches'
+            description='Save and rerun searches instantly'
           />
           <HighlightCard
             icon={

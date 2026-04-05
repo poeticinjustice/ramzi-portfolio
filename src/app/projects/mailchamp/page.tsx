@@ -1,7 +1,7 @@
 'use client';
 
 import Navigation from '@/components/Navigation';
-import MermaidDiagram from '@/components/MermaidDiagram';
+import MermaidDiagram from '@/components/LazyMermaidDiagram';
 import ImageModal from '@/components/ImageModal';
 import ExpandableStory from '@/components/ExpandableStory';
 import ProjectHero from '@/components/project/ProjectHero';
@@ -75,7 +75,12 @@ export default function MailChampCaseStudy() {
                       I&apos;ve learned the most about React and Redux while
                       working on this too. The first version was just frontend,
                       and it&apos;s since become a robust full-stack app that
-                      uses RTK query. And I have more plans for the future.
+                      uses RTK Query, with admin-approved user accounts to keep
+                      access controlled. And I have more plans for the future.
+                    </p>
+                    <p>
+                      Screenshots throughout are redacted—this is a live
+                      production tool and the data is private.
                     </p>
                   </>
                 }
@@ -101,7 +106,7 @@ export default function MailChampCaseStudy() {
                   Status
                 </h3>
                 <p className='text-slate-600 dark:text-slate-400 text-sm'>
-                  Private Project
+                  Private Project — Actively Used in Production
                 </p>
               </div>
             </div>
@@ -332,7 +337,7 @@ export default function MailChampCaseStudy() {
               Frontend (React)
             </h3>
             <div className='space-y-4'>
-              <TechStackItem text='React 19 with functional components and hooks' />
+              <TechStackItem text='React 18 with functional components and hooks' />
               <TechStackItem text='Redux Toolkit (RTK) with RTK Query' />
               <TechStackItem text='React Router DOM v6 with protected routes' />
               <TechStackItem text='React Bootstrap 5 with custom styling' />

@@ -37,6 +37,8 @@ export default function ProjectGallery({
                   height={800}
                   className='w-full h-96 object-cover object-left'
                   loading='lazy'
+                  placeholder='blur'
+                  blurDataURL='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwMCIgaGVpZ2h0PSI4MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iI2UyZThmMCIvPjwvc3ZnPg=='
                 />
                 <div className='p-4 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-700'>
                   <p className='text-slate-600 dark:text-slate-400 text-sm text-center leading-relaxed'>

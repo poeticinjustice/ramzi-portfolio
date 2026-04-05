@@ -98,4 +98,41 @@
   .dark .accent-border-alt {
     background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
   }
+
+  /* Focus indicators for accessibility */
+  a:focus-visible,
+  button:focus-visible,
+  [role="button"]:focus-visible {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  .dark a:focus-visible,
+  .dark button:focus-visible,
+  .dark [role="button"]:focus-visible {
+    outline-color: #60a5fa;
+  }
+
+  /* Skip to content link */
+  .skip-to-content {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 100;
+    padding: 0.75rem 1.5rem;
+    background: #0f172a;
+    color: white;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+
+  .skip-to-content:focus {
+    left: 0;
+  }
+
+  .dark .skip-to-content {
+    background: white;
+    color: #0f172a;
+  }
 }
