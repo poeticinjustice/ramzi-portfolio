@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ramzi Kanazi - Full-Stack Developer (Extended)</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      @page {
+        size: letter;
+        margin: 0.6in 0.65in;
+      }
+
+      body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.4;
+        color: #333;
+        max-width: 8.5in;
+        margin: 0 auto;
+        padding: 0.6in 0.65in;
+        font-size: 10.5pt;
+      }
+
+      @media print {
+        body {
+          padding: 0;
+          margin: 0;
+        }
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 14px;
+        padding-bottom: 10px;
+        border-bottom: 2.5px solid #2c3e50;
+      }
+
+      h1 {
+        font-size: 26pt;
+        color: #2c3e50;
+        margin-bottom: 5px;
+        font-weight: 600;
+      }
+
+      .subtitle {
+        font-size: 12pt;
+        color: #555;
+        margin-bottom: 7px;
+        font-weight: 500;
+      }
+
+      .contact {
+        font-size: 9.5pt;
+        color: #666;
+        display: flex;
+        justify-content: center;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+
+      .contact a {
+        color: #2c3e50;
+        text-decoration: none;
+      }
+
+      .section {
+        margin-bottom: 13px;
+      }
+
+      h2 {
+        font-size: 12pt;
+        color: #2c3e50;
+        border-bottom: 1.5px solid #2c3e50;
+        padding-bottom: 3px;
+        margin-bottom: 8px;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        font-weight: 600;
+      }
+
+      .summary {
+        font-size: 10pt;
+        line-height: 1.45;
+        color: #444;
+      }
+
+      .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px 12px;
+      }
+
+      .skill-category {
+        font-size: 10pt;
+      }
+
+      .skill-category strong {
+        color: #2c3e50;
+        display: block;
+        margin-bottom: 4px;
+        font-size: 10.5pt;
+      }
+
+      .skill-category span {
+        color: #555;
+        font-size: 9.5pt;
+        line-height: 1.35;
+        display: block;
+      }
+
+      .project {
+        margin-bottom: 11px;
+        page-break-inside: avoid;
+      }
+
+      .project-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 4px;
+      }
+
+      .project-title {
+        font-size: 11pt;
+        font-weight: 600;
+        color: #2c3e50;
+      }
+
+      .project-tech {
+        font-size: 9pt;
+        color: #666;
+        font-style: italic;
+      }
+
+      .project-description {
+        font-size: 10pt;
+        color: #555;
+        line-height: 1.35;
+      }
+
+      .project-description ul {
+        margin-left: 18px;
+        margin-top: 3px;
+      }
+
+      .project-description li {
+        margin-bottom: 3px;
+      }
+
+      .experience-item {
+        margin-bottom: 12px;
+        page-break-inside: avoid;
+      }
+
+      .experience-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 4px;
+      }
+
+      .job-title {
+        font-size: 11pt;
+        font-weight: 600;
+        color: #2c3e50;
+      }
+
+      .company-name {
+        font-size: 10pt;
+        color: #555;
+        font-style: italic;
+      }
+
+      .dates {
+        font-size: 9.5pt;
+        color: #666;
+        white-space: nowrap;
+      }
+
+      .responsibilities {
+        font-size: 10pt;
+        color: #555;
+        line-height: 1.35;
+      }
+
+      .responsibilities ul {
+        margin-left: 18px;
+        margin-top: 3px;
+      }
+
+      .responsibilities li {
+        margin-bottom: 3px;
+      }
+
+      @media print {
+        a {
+          color: #2c3e50;
+          text-decoration: none;
+        }
+
+        .page-break {
+          page-break-before: always;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Ramzi Kanazi</h1>
+      <div class="subtitle">Full-Stack Developer (MERN)</div>
+      <div class="contact">
+        <span>ramzi.kanazi@gmail.com</span>
+        <span><a href="https://www.ramzikanazi.com">ramzikanazi.com</a></span>
+        <span
+          ><a href="https://linkedin.com/in/ramzi-kanazi"
+            >linkedin.com/in/ramzi-kanazi</a
+          ></span
+        >
+        <span
+          ><a href="https://github.com/poeticinjustice"
+            >github.com/poeticinjustice</a
+          ></span
+        >
+      </div>
+    </header>
+
+    <div class="section">
+      <h2>Professional Summary</h2>
+      <div class="summary">
+        Full-Stack Developer specializing in building data-driven web and
+        mobile applications that make complex information accessible. Proven
+        track record developing cross-platform tools handling large-scale data
+        processing including congressional voting records, NYC job markets,
+        and campaign analytics. Experienced in full development lifecycle
+        with focus on scalability, performance, and clean code practices.
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <strong>Frontend Development</strong>
+          <span
+            >React 19, React Native, Redux Toolkit, JavaScript (ES6+), HTML5, CSS3, Tailwind
+            CSS, Bootstrap, Vite, Leaflet Maps, Cloudinary, Responsive Design,
+            Component-Based Architecture</span
+          >
+        </div>
+        <div class="skill-category">
+          <strong>Backend Development</strong>
+          <span
+            >Node.js, Express, MongoDB Atlas, Mongoose, RESTful APIs, JWT
+            Authentication, Python, lxml, Web Scraping, Batch Data Processing,
+            Database Design</span
+          >
+        </div>
+        <div class="skill-category">
+          <strong>DevOps & Tools</strong>
+          <span
+            >Git/GitHub, Xcode, Heroku, Render, CI/CD Pipelines, Cloud Deployment,
+            Performance Optimization, AI Development Tools (Claude Code, Cursor
+            AI)</span
+          >
+        </div>
+        <div class="skill-category">
+          <strong>Additional Skills</strong>
+          <span
+            >API Integration (Congress.gov, FEC, MailChimp, Geolocation), Data Visualization, Agile
+            Development, Testing & Debugging, Technical Documentation, User
+            Experience Design</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Featured Projects</h2>
+
+      <div class="project">
+        <div class="project-header">
+          <span class="project-title">Bill Progress</span>
+          <span class="project-tech"
+            >React 19, React Native, Expo, Node.js, MongoDB, Python</span
+          >
+        </div>
+        <div class="project-description">
+          <ul>
+            <li>
+              Built cross-platform congressional vote tracking app for web and iOS (App Store) using a monorepo with shared Redux store across React and React Native
+            </li>
+            <li>
+              Implemented Python/lxml scraping pipeline with nightly syncs from official House/Senate sources and Congress.gov API
+            </li>
+            <li>
+              Integrated FEC campaign finance API to surface donor data and PAC funding alongside member voting records
+            </li>
+            <li>
+              Designed 10+ RTK Query slices in a shared package consumed by both web (React 19 + Vite) and mobile (Expo SDK 54) clients
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <span class="project-title">NYC Jobs Platform</span>
+          <span class="project-tech">MERN Stack, REST API, MongoDB Atlas</span>
+        </div>
+        <div class="project-description">
+          <ul>
+            <li>
+              Developed full-stack job search platform for NYC government
+              positions with advanced filtering capabilities
+            </li>
+            <li>
+              Designed RESTful API with Express and MongoDB to manage job
+              postings, user profiles, and application tracking
+            </li>
+            <li>
+              Created React-based UI enabling users to filter thousands of job
+              postings by department, location, and qualifications
+            </li>
+            <li>
+              Implemented JWT authentication and optimized database queries with
+              pagination for performance
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <span class="project-title">MailChamp</span>
+          <span class="project-tech">Node.js, Express, MailChimp API</span>
+        </div>
+        <div class="project-description">
+          <ul>
+            <li>
+              Built automated campaign performance reporting system integrating
+              MailChimp API for real-time analytics
+            </li>
+            <li>
+              Developed Express backend to aggregate and visualize campaign
+              metrics including open rates and conversions
+            </li>
+            <li>
+              Created automated dashboards reducing manual reporting time and
+              providing actionable insights
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <span class="project-title">Placer</span>
+          <span class="project-tech"
+            >React, Leaflet, MongoDB, Geolocation API</span
+          >
+        </div>
+        <div class="project-description">
+          <ul>
+            <li>
+              Created interactive location discovery platform with real-time
+              mapping using Leaflet and Geolocation API
+            </li>
+            <li>
+              Implemented geospatial queries in MongoDB for efficient
+              location-based searching
+            </li>
+            <li>
+              Developed user engagement features including location saving,
+              rating system, and social sharing
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="section page-break">
+      <h2>Professional Experience</h2>
+
+      <div class="experience-item">
+        <div class="experience-header">
+          <div>
+            <div class="job-title">Publishing Coordinator</div>
+            <div class="company-name">Lighting&Sound America (LSA)</div>
+          </div>
+          <div class="dates">Jan 2018 - Present</div>
+        </div>
+        <div class="responsibilities">
+          <ul>
+            <li>
+              Developed MailChamp application to automate customized email
+              marketing reports, significantly reducing manual reporting time
+            </li>
+            <li>
+              Led migration from legacy email marketing platform to MailChimp,
+              designing templates and streamlined processes
+            </li>
+            <li>
+              Analyze website and mobile app statistics using Google Analytics
+              and Firebase for data-driven decision making
+            </li>
+            <li>
+              Provide software assistance across platforms including Joomla! and
+              G Suite, creating documentation and usage guidelines
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <div class="experience-header">
+          <div>
+            <div class="job-title">Freelance Web Developer & Consultant</div>
+            <div class="company-name">Self-Employed</div>
+          </div>
+          <div class="dates">Ongoing</div>
+        </div>
+        <div class="responsibilities">
+          <ul>
+            <li>
+              Design and develop custom websites and promotional materials for
+              diverse clientele
+            </li>
+            <li>
+              Advise clients on SEO best practices including content
+              optimization, meta descriptions, and contextual linking
+            </li>
+            <li>
+              Manage websites for film producers, writers, and performers,
+              collaborating on digital presence and event promotion
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <div class="experience-header">
+          <div>
+            <div class="job-title">Paralegal</div>
+            <div class="company-name">Frankfurt Kurnit Klein & Selz</div>
+          </div>
+          <div class="dates">2013 - 2014</div>
+        </div>
+        <div class="responsibilities">
+          <ul>
+            <li>
+              Maintained digital workspaces and collaborated with IT to optimize
+              department resource management
+            </li>
+            <li>
+              Trained supervisors and attorneys on effective utilization of
+              electronic resources and digital workflow systems
+            </li>
+            <li>
+              Prepared and updated detailed capitalization tables for corporate
+              transactions
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <div class="experience-header">
+          <div>
+            <div class="job-title">Paralegal</div>
+            <div class="company-name">Manatt, Phelps & Phillips, LLP</div>
+          </div>
+          <div class="dates">2011 - 2013</div>
+        </div>
+        <div class="responsibilities">
+          <ul>
+            <li>
+              Created complex structure charts and spreadsheets tracking assets
+              during multibillion dollar media acquisitions
+            </li>
+            <li>
+              Supported due diligence and bidding processes with detailed
+              documentation and analysis
+            </li>
+            <li>
+              Prepared professional presentations for not-for-profit seminars
+              and client meetings
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <div class="experience-header">
+          <div>
+            <div class="job-title">Paralegal</div>
+            <div class="company-name">Heller Ehrman</div>
+          </div>
+          <div class="dates">2005 - 2008</div>
+        </div>
+        <div class="responsibilities">
+          <ul>
+            <li>
+              Maintained firm's electronic resources for SEC, IRS, UCC, and
+              state filings
+            </li>
+            <li>
+              Organized NY and DE corporations, LLCs, LPs, and not-for-profits;
+              drafted charters, bylaws, and resolutions
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="experience-item">
+        <div class="experience-header">
+          <div>
+            <div class="job-title">Technical Support Specialist</div>
+            <div class="company-name">RCN</div>
+          </div>
+          <div class="dates">2000 - 2003</div>
+        </div>
+        <div class="responsibilities">
+          <ul>
+            <li>
+              Provided final tier of technical support, resolving complex
+              customer issues
+            </li>
+            <li>
+              Assisted clients with network troubleshooting and deployment
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
