@@ -100,7 +100,7 @@ export default function BillProgressCaseStudy() {
               </h2>
               <ExpandableStory
                 defaultExpanded
-                teaser='This was an exciting project for me. I wanted to use the ProPublica Congress API, but they stopped giving out API keys and ultimately sunsetted the project before I had a chance to access it.'
+                teaser='What started as a MERN web app for tracking congressional votes evolved into a cross-platform experience—after exploring native iOS with Swift, I moved to React Native to share a Redux store across web and mobile.'
                 fullStory={
                   <>
                     <p>
@@ -283,7 +283,7 @@ export default function BillProgressCaseStudy() {
               </svg>
             }
             title='Cross-Platform Mobile App'
-            description='Native iOS app built with React Native and Expo SDK 54, available on the App Store for iPhone and iPad with the same congressional data and features.'
+            description='Started with native Swift/Xcode exploration, then moved to React Native with Expo SDK 54 to share the Redux store across platforms. Available on the App Store for iPhone and iPad.'
           />
           <FeatureCard
             icon={
@@ -401,8 +401,9 @@ export default function BillProgressCaseStudy() {
             </h3>
             <div className='space-y-4'>
               <TechStackItem text='React Native with Expo SDK 54' />
+              <TechStackItem text='Shared Redux store (packages/shared) across web and mobile' />
               <TechStackItem text='Available on App Store for iPhone and iPad' />
-              <TechStackItem text='Native iOS experience with shared backend' />
+              <TechStackItem text='Initially explored native Swift/Xcode before choosing React Native' />
             </div>
           </div>
         </div>

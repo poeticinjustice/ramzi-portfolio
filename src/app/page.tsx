@@ -186,262 +186,280 @@ export default function Home() {
             </p>
           </div>
 
-          <div className='grid md:grid-cols-2 gap-8'>
-            {/* Bill Progress */}
-            <div className='bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 transition-colors duration-200'>
-              <div className='p-8'>
-                <h3 className='text-xl font-medium text-slate-900 dark:text-white mb-4'>
-                  Bill Progress
-                </h3>
-                <p className='text-slate-600 dark:text-slate-400 mb-6 leading-relaxed'>
-                  Full-stack platform for tracking congressional votes, bills,
-                  and members on web and iOS. Features voting history, member
-                  report cards, FEC campaign finance data, community posts, and
-                  bill monitoring with new-vote alerts.
-                </p>
-                <div className='flex flex-wrap gap-2 mb-6'>
-                  <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
-                    MERN Stack
-                  </span>
-                  <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
-                    React 19 + Vite
-                  </span>
-                  <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
-                    React Native / Expo
-                  </span>
-                  <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
-                    Redux Toolkit
-                  </span>
-                  <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
-                    Congress API
-                  </span>
-                  <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
-                    FEC API
-                  </span>
-                </div>
-                <div className='flex gap-6'>
-                  <div className='flex items-center gap-2'>
+          {/* Public Apps */}
+          <div className='mb-12'>
+            <h3 className='text-sm font-medium text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-6'>
+              Public Apps
+            </h3>
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+              {/* Bill Progress */}
+              <div className='bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 transition-colors duration-200'>
+                <div className='p-8'>
+                  <h4 className='text-xl font-medium text-slate-900 dark:text-white mb-4'>
+                    Bill Progress
+                  </h4>
+                  <p className='text-slate-600 dark:text-slate-400 mb-6 leading-relaxed'>
+                    Full-stack platform for tracking congressional votes, bills,
+                    and members on web and iOS. Features voting history, member
+                    report cards, FEC campaign finance data, community posts, and
+                    bill monitoring with new-vote alerts.
+                  </p>
+                  <div className='flex flex-wrap gap-2 mb-6'>
+                    <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
+                      MERN Stack
+                    </span>
+                    <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
+                      React 19 + Vite
+                    </span>
+                    <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
+                      React Native / Expo
+                    </span>
+                    <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
+                      Redux Toolkit
+                    </span>
+                    <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
+                      Congress API
+                    </span>
+                    <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
+                      FEC API
+                    </span>
+                    <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
+                      Monorepo
+                    </span>
+                  </div>
+                  <div className='flex gap-6'>
+                    <div className='flex items-center gap-2'>
+                      <a
+                        href='https://github.com/poeticinjustice/ktr'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors'
+                      >
+                        GitHub
+                      </a>
+                      <span className='inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200'>
+                        <svg
+                          className='w-3 h-3 mr-1'
+                          fill='currentColor'
+                          viewBox='0 0 20 20'
+                        >
+                          <path
+                            fillRule='evenodd'
+                            d='M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z'
+                            clipRule='evenodd'
+                          />
+                        </svg>
+                        Private
+                      </span>
+                    </div>
                     <a
-                      href='https://github.com/poeticinjustice/ktr'
+                      href='https://billprogress.com'
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors'
+                    >
+                      Live Demo
+                    </a>
+                    <a
+                      href='/projects/bill-progress'
+                      className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors'
+                    >
+                      Project Details
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* NYC Jobs App */}
+              <div className='bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 transition-colors duration-200'>
+                <div className='p-8'>
+                  <h4 className='text-xl font-medium text-slate-900 dark:text-white mb-4'>
+                    NYC Jobs
+                  </h4>
+                  <p className='text-slate-600 dark:text-slate-400 mb-6 leading-relaxed'>
+                    Job search platform aggregating NYC, federal, and NYS
+                    government positions. Track applications through a full
+                    pipeline, browse jobs on a map, save searches, and keep notes
+                    with priority levels and tags.
+                  </p>
+                  <div className='flex flex-wrap gap-2 mb-6'>
+                    <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
+                      MERN Stack
+                    </span>
+                    <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
+                      Redux Toolkit
+                    </span>
+                    <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
+                      NYC Open Data
+                    </span>
+                    <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
+                      USA Jobs API
+                    </span>
+                    <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
+                      Mapbox GL
+                    </span>
+                  </div>
+                  <div className='flex gap-6'>
+                    <a
+                      href='https://github.com/poeticinjustice/nyc-jobs-app'
                       target='_blank'
                       rel='noopener noreferrer'
                       className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors'
                     >
                       GitHub
                     </a>
-                    <span className='inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200'>
-                      <svg
-                        className='w-3 h-3 mr-1'
-                        fill='currentColor'
-                        viewBox='0 0 20 20'
-                      >
-                        <path
-                          fillRule='evenodd'
-                          d='M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z'
-                          clipRule='evenodd'
-                        />
-                      </svg>
-                      Private
+                    <button
+                      onClick={() =>
+                        handleExternalLink(
+                          'https://nyc-jobs-app.onrender.com/',
+                          'NYC Jobs',
+                        )
+                      }
+                      className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors relative group'
+                      title='Hosted on Render free tier - may take a moment to wake up'
+                    >
+                      Live Demo
+                      <span className='absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-slate-900 dark:bg-slate-700 text-white text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none'>
+                        Hosted on Render - may take a moment to wake up
+                      </span>
+                    </button>
+                    <a
+                      href='/projects/nyc-jobs'
+                      className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors'
+                    >
+                      Project Details
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              {/* Placer */}
+              <div className='bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 transition-colors duration-200'>
+                <div className='p-8'>
+                  <h4 className='text-xl font-medium text-slate-900 dark:text-white mb-4'>
+                    Placer
+                  </h4>
+                  <p className='text-slate-600 dark:text-slate-400 mb-6 leading-relaxed'>
+                    Community-driven location discovery platform built entirely
+                    with Claude Code. Users share places with photos, explore
+                    them on interactive Leaflet maps, and browse in
+                    gallery/list/map views. Includes geolocation search, user
+                    profiles, comments, and admin approval workflow.
+                  </p>
+                  <div className='flex flex-wrap gap-2 mb-6'>
+                    <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
+                      MERN Stack
+                    </span>
+                    <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
+                      Redux Toolkit
+                    </span>
+                    <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
+                      Cloudinary
+                    </span>
+                    <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
+                      Leaflet
                     </span>
                   </div>
-                  <a
-                    href='https://billprogress.com'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors'
-                  >
-                    Live Demo
-                  </a>
-                  <a
-                    href='/projects/bill-progress'
-                    className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors'
-                  >
-                    Project Details
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* NYC Jobs App */}
-            <div className='bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 transition-colors duration-200'>
-              <div className='p-8'>
-                <h3 className='text-xl font-medium text-slate-900 dark:text-white mb-4'>
-                  NYC Jobs
-                </h3>
-                <p className='text-slate-600 dark:text-slate-400 mb-6 leading-relaxed'>
-                  Job search platform aggregating NYC, federal, and NYS
-                  government positions. Track applications through a full
-                  pipeline, browse jobs on a map, save searches, and keep notes
-                  with priority levels and tags.
-                </p>
-                <div className='flex flex-wrap gap-2 mb-6'>
-                  <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
-                    MERN Stack
-                  </span>
-                  <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
-                    Redux Toolkit
-                  </span>
-                  <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
-                    NYC Open Data
-                  </span>
-                  <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
-                    USA Jobs API
-                  </span>
-                  <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
-                    Mapbox GL
-                  </span>
-                </div>
-                <div className='flex gap-6'>
-                  <a
-                    href='https://github.com/poeticinjustice/nyc-jobs-app'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors'
-                  >
-                    GitHub
-                  </a>
-                  <button
-                    onClick={() =>
-                      handleExternalLink(
-                        'https://nyc-jobs-app.onrender.com/',
-                        'NYC Jobs',
-                      )
-                    }
-                    className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors relative group'
-                    title='Hosted on Render free tier - may take a moment to wake up'
-                  >
-                    Live Demo
-                    <span className='absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-slate-900 dark:bg-slate-700 text-white text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none'>
-                      Hosted on Render - may take a moment to wake up
-                    </span>
-                  </button>
-                  <a
-                    href='/projects/nyc-jobs'
-                    className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors'
-                  >
-                    Project Details
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* MailChamp */}
-            <div className='bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 transition-colors duration-200'>
-              <div className='p-8'>
-                <h3 className='text-xl font-medium text-slate-900 dark:text-white mb-4'>
-                  MailChamp
-                </h3>
-                <p className='text-slate-600 dark:text-slate-400 mb-6 leading-relaxed'>
-                  Automates campaign reporting with customizable link exclusion,
-                  dual-format exports (spreadsheet + email-ready), and visual
-                  analytics—eliminating the process of copying data across
-                  multiple pages and calculating statistics manually.
-                </p>
-                <div className='flex flex-wrap gap-2 mb-6'>
-                  <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
-                    MERN Stack
-                  </span>
-                  <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
-                    Redux Toolkit
-                  </span>
-                  <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
-                    MailChimp API
-                  </span>
-                  <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
-                    Recharts
-                  </span>
-                </div>
-                <div className='flex gap-6'>
-                  <div className='flex items-center gap-2'>
+                  <div className='flex gap-6'>
                     <a
-                      href='https://github.com/poeticinjustice/MailChamp2024'
+                      href='https://github.com/poeticinjustice/placer'
                       target='_blank'
                       rel='noopener noreferrer'
                       className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors'
                     >
                       GitHub
                     </a>
-                    <span className='inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200'>
-                      <svg
-                        className='w-3 h-3 mr-1'
-                        fill='currentColor'
-                        viewBox='0 0 20 20'
-                      >
-                        <path
-                          fillRule='evenodd'
-                          d='M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z'
-                          clipRule='evenodd'
-                        />
-                      </svg>
-                      Private
-                    </span>
+                    <button
+                      onClick={() =>
+                        handleExternalLink(
+                          'https://placer-app-cffc6463c817.herokuapp.com',
+                          'Placer',
+                        )
+                      }
+                      className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors relative group'
+                      title='Hosted on Heroku free tier - may take a moment to wake up'
+                    >
+                      Live Demo
+                      <span className='absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-slate-900 dark:bg-slate-700 text-white text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none'>
+                        Hosted on Heroku - may take a moment to wake up
+                      </span>
+                    </button>
+                    <a
+                      href='/projects/placer'
+                      className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors'
+                    >
+                      Project Details
+                    </a>
                   </div>
-                  <a
-                    href='/projects/mailchamp'
-                    className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors'
-                  >
-                    Project Details
-                  </a>
                 </div>
               </div>
             </div>
+          </div>
 
-            {/* Placer */}
-            <div className='bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 transition-colors duration-200'>
-              <div className='p-8'>
-                <h3 className='text-xl font-medium text-slate-900 dark:text-white mb-4'>
-                  Placer
-                </h3>
-                <p className='text-slate-600 dark:text-slate-400 mb-6 leading-relaxed'>
-                  Location discovery and sharing platform. Users post places
-                  with photos (via Cloudinary), view them on Leaflet maps with
-                  geolocation search, and browse in gallery/list/map views.
-                  Includes user profiles, comments, and admin approval workflow.
-                </p>
-                <div className='flex flex-wrap gap-2 mb-6'>
-                  <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
-                    MERN Stack
-                  </span>
-                  <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
-                    Redux Toolkit
-                  </span>
-                  <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
-                    Cloudinary
-                  </span>
-                  <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
-                    Leaflet
-                  </span>
-                </div>
-                <div className='flex gap-6'>
-                  <a
-                    href='https://github.com/poeticinjustice/placer'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors'
-                  >
-                    GitHub
-                  </a>
-                  <button
-                    onClick={() =>
-                      handleExternalLink(
-                        'https://placer-app-cffc6463c817.herokuapp.com',
-                        'Placer',
-                      )
-                    }
-                    className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors relative group'
-                    title='Hosted on Heroku free tier - may take a moment to wake up'
-                  >
-                    Live Demo
-                    <span className='absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-2 bg-slate-900 dark:bg-slate-700 text-white text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none'>
-                      Hosted on Heroku - may take a moment to wake up
+          {/* Production Tools */}
+          <div>
+            <h3 className='text-sm font-medium text-slate-500 dark:text-slate-400 uppercase tracking-widest mb-6'>
+              Production Tools
+            </h3>
+            <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
+              {/* MailChamp */}
+              <div className='bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600 transition-colors duration-200'>
+                <div className='p-8'>
+                  <h4 className='text-xl font-medium text-slate-900 dark:text-white mb-4'>
+                    MailChamp
+                  </h4>
+                  <p className='text-slate-600 dark:text-slate-400 mb-6 leading-relaxed'>
+                    Automates campaign reporting with customizable link exclusion,
+                    dual-format exports (spreadsheet + email-ready), and visual
+                    analytics—eliminating the process of copying data across
+                    multiple pages and calculating statistics manually.
+                  </p>
+                  <div className='flex flex-wrap gap-2 mb-6'>
+                    <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
+                      MERN Stack
                     </span>
-                  </button>
-                  <a
-                    href='/projects/placer'
-                    className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors'
-                  >
-                    Project Details
-                  </a>
+                    <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
+                      Redux Toolkit
+                    </span>
+                    <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
+                      MailChimp API
+                    </span>
+                    <span className='px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs font-medium rounded-full'>
+                      Recharts
+                    </span>
+                  </div>
+                  <div className='flex gap-6'>
+                    <div className='flex items-center gap-2'>
+                      <a
+                        href='https://github.com/poeticinjustice/MailChamp2024'
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors'
+                      >
+                        GitHub
+                      </a>
+                      <span className='inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-200'>
+                        <svg
+                          className='w-3 h-3 mr-1'
+                          fill='currentColor'
+                          viewBox='0 0 20 20'
+                        >
+                          <path
+                            fillRule='evenodd'
+                            d='M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z'
+                            clipRule='evenodd'
+                          />
+                        </svg>
+                        Private
+                      </span>
+                    </div>
+                    <a
+                      href='/projects/mailchamp'
+                      className='text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white text-sm font-medium transition-colors'
+                    >
+                      Project Details
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
